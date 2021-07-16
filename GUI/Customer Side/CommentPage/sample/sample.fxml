@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="542.0" prefWidth="891.0" style="-fx-background-color: #fffbe7;">
+         <children>
+            <SplitPane layoutX="-3.0" layoutY="1.0" prefHeight="540.0" prefWidth="288.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #fffbe7;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="50.0" layoutY="14.0" prefHeight="51.0" prefWidth="186.0" style="-fx-background-color: #66cc00;" text="PRODUCT INFORMATION" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="78.0" layoutY="249.0" prefHeight="19.0" prefWidth="130.0" style="-fx-background-color: #66cc00;" text="Name:   Paul's Milk">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="78.0" layoutY="284.0" prefHeight="18.0" prefWidth="130.0" style="-fx-background-color: #66cc00;" text="Market Name: Mommy's" />
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="68.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../2020-2021%20Summer/Project/pauls-fullcream.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="72.0" layoutY="354.0" prefHeight="19.0" prefWidth="142.0" style="-fx-background-color: #66cc00;" text="Review Averages">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="420.0" prefHeight="18.0" prefWidth="92.0" style="-fx-background-color: #66cc00;" text="Overall" />
+                        <Label layoutX="26.0" layoutY="449.0" style="-fx-background-color: #66cc00;" text="Customer Service" />
+                        <Label layoutX="26.0" layoutY="480.0" prefHeight="18.0" prefWidth="92.0" style="-fx-background-color: #66cc00;" text="Freshness" />
+                        <ProgressBar layoutX="128.0" layoutY="420.0" prefHeight="18.0" prefWidth="150.0" progress="0.75" />
+                        <ProgressBar layoutX="128.0" layoutY="448.0" prefHeight="18.0" prefWidth="150.0" progress="0.85" />
+                        <ProgressBar layoutX="128.0" layoutY="479.0" prefHeight="18.0" prefWidth="150.0" progress="0.65" />
+                        <SplitPane layoutX="-1.0" layoutY="335.0" orientation="VERTICAL" prefHeight="11.0" prefWidth="288.0" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <Button layoutX="519.0" layoutY="33.0" mnemonicParsing="false" style="-fx-background-color: #66cc00;" text="Back to Main Page" />
+            <Button layoutX="633.0" layoutY="33.0" mnemonicParsing="false" style="-fx-background-color: #66cc00;" text="Back to My Past Activities" />
+            <Button layoutX="784.0" layoutY="33.0" mnemonicParsing="false" style="-fx-background-color: #66cc00;" text="Help" />
+            <Button layoutX="825.0" layoutY="33.0" mnemonicParsing="false" style="-fx-background-color: #66cc00;" text="Information" />
+            <SplitPane layoutX="285.0" layoutY="337.0" orientation="VERTICAL" prefHeight="11.0" prefWidth="618.0" />
+            <Label alignment="CENTER" layoutX="303.0" layoutY="362.0" prefHeight="40.0" prefWidth="78.0" style="-fx-background-color: #66cc00;" text="Evaluation">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="292.0" layoutY="414.0" text="Customer of Service" />
+            <Label alignment="CENTER" layoutX="292.0" layoutY="475.0" prefHeight="18.0" prefWidth="106.0" text="Freshness" />
+            <ComboBox layoutX="292.0" layoutY="442.0" prefHeight="26.0" prefWidth="106.0" promptText="Points" />
+            <ComboBox layoutX="292.0" layoutY="501.0" prefHeight="26.0" prefWidth="106.0" promptText="Points" />
+            <TextArea layoutX="440.0" layoutY="384.0" prefHeight="141.0" prefWidth="423.0" text="Write your comment here..." />
+            <RadioButton layoutX="456.0" layoutY="363.0" mnemonicParsing="false" text="Write Anonymously" />
+            <Button layoutX="709.0" layoutY="359.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="126.0" style="-fx-background-color: #66cc00;" text="Send My Comment" />
+            <TextArea layoutX="321.0" layoutY="112.0" prefHeight="150.0" prefWidth="522.0" text="Comment goes here..." />
+            <Button layoutX="678.0" layoutY="83.0" mnemonicParsing="false" style="-fx-background-color: #00ff00;" text="Like" />
+            <Button layoutX="756.0" layoutY="83.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #FF0000;" text="Dislike" />
+            <ImageView fitHeight="27.0" fitWidth="41.0" layoutX="715.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../indir.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="47.0" layoutX="815.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../indir%20(1).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="321.0" layoutY="97.0" prefHeight="18.0" prefWidth="78.0" style="-fx-background-color: #66cc00;" text="Özcan Öztürk" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
