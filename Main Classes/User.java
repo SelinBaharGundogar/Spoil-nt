@@ -66,8 +66,9 @@ public abstract class User implements Comparable {
      * This method sets the new address
      * @param anAddress
      * @return null
-     */
+     */n
     public void setAddress( Address anAddress) {
         this.anAddress = anAddress;
     }
+    //this is a comment
 }
