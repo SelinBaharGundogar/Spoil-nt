@@ -1,9 +1,9 @@
 /**
  * This abstract class creates the basis of all user types.
  * @version 18 July, 2021
- * @author Selin Bahar Gündoğar
+ * @author Selin Bahar Gündoğar, Parsa Keihan
  */
-public abstract class User {
+public abstract class User implements Comparable {
     private String email;
     private String password;
     private int ID;
