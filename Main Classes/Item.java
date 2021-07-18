@@ -16,6 +16,11 @@ public class Item implements Comparable{
     private double amount;
     private boolean selected;
     private Comment itemComment;
+    
+    /**
+     * This constructor creates an Item
+     * @param name, dueDate, category, brand, price, measure, amount, itemComment
+     */
     public Item(String name, Date dueDate, String category, String brand, double price, String measure, double amount, Comment itemComment) {
         this.name = name;
         this.dueDate = dueDate;
