@@ -6,9 +6,9 @@ import java.util.ArrayList;
  * @author Selin Bahar Gündoğar
  */
 public class Basket implements Comparable{
-    private ArrayList<CurrentItem> products;
+    private ArrayList<Item> products;
     public Basket() {
-        products = new ArrayList<CurrentItem>();
+        products = new ArrayList<Item>();
 
     }
 
