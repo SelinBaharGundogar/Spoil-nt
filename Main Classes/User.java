@@ -69,5 +69,5 @@ public abstract class User implements Comparable {
      */
     public void setAddress( Address anAddress) {
         this.anAddress = anAddress;
-    }
+    } 
 }
