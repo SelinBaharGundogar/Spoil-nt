@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CustomerProfileController">
+   <top>
+      <AnchorPane prefHeight="210.0" prefWidth="615.0" style="-fx-background-color: #fffbe7;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="120.0" fitWidth="144.0" layoutX="22.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/profile.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="156.0" text="ID:" />
+            <Label fx:id="ıdLabelText" layoutX="54.0" layoutY="156.0" prefHeight="18.0" prefWidth="88.0" />
+            <Label layoutX="191.0" layoutY="40.0" prefHeight="18.0" prefWidth="137.0" text="     Personal Information" textFill="#66cc00" />
+            <Line endX="-99.99996948242188" endY="148.60000610351562" layoutX="463.0" layoutY="25.0" startX="-100.0" />
+            <Label layoutX="448.0" layoutY="40.0" prefHeight="18.0" prefWidth="137.0" text="  Contact Information" textFill="#66cc00" />
+            <Label layoutX="180.0" layoutY="76.0" text="Name:" />
+            <Label layoutX="180.0" layoutY="109.0" text="Surname:" />
+            <Label layoutX="177.0" layoutY="147.0" text="Username:" />
+            <Label fx:id="profilePageName" layoutX="233.0" layoutY="76.0" prefHeight="18.0" prefWidth="108.0" />
+            <Label fx:id="profilePageSurname" layoutX="246.0" layoutY="109.0" prefHeight="18.0" prefWidth="108.0" />
+            <Label fx:id="profilePageUsername" layoutX="246.0" layoutY="147.0" prefHeight="18.0" prefWidth="108.0" />
+            <Label layoutX="395.0" layoutY="76.0" text="Email:" />
+            <Label layoutX="393.0" layoutY="108.0" text="Number:" />
+            <Label layoutX="394.0" layoutY="147.0" text="Address:" />
+            <Label fx:id="profilePageEmail" layoutX="449.0" layoutY="75.0" prefHeight="18.0" prefWidth="135.0" />
+            <Label fx:id="profilePageNumber" layoutX="462.0" layoutY="109.0" prefHeight="18.0" prefWidth="124.0" />
+            <Label fx:id="addressProfilePage" layoutX="459.0" layoutY="146.0" prefHeight="18.0" prefWidth="130.0" />
+            <Button fx:id="returnToMain" layoutX="505.0" layoutY="1.0" mnemonicParsing="false" onAction="#returnToMainOnAction" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #66cc00;" text="Return to Main Page" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="323.0" prefWidth="599.0" style="-fx-background-color: #fffbe7;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableView" layoutY="12.0" prefHeight="311.0" prefWidth="592.0" style="-fx-background-color: #fffbe7;">
+              <columns>
+                <TableColumn fx:id="columnNumber" prefWidth="34.00003206729889" style="-fx-background-color: #66cc00;" text="#" />
+                <TableColumn fx:id="dateColumn" prefWidth="72.80002212524414" style="-fx-background-color: #66cc00;" text="Date" />
+                  <TableColumn fx:id="categoryColumn" prefWidth="93.60000610351562" style="-fx-background-color: #66cc00;" text="Category" />
+                  <TableColumn fx:id="nameColumn" prefWidth="82.59999084472656" style="-fx-background-color: #66cc00;" text="Name" />
+                  <TableColumn fx:id="marketColumn" prefWidth="82.20001220703125" style="-fx-background-color: #66cc00;" text="Market" />
+                  <TableColumn prefWidth="74.79998779296875" style="-fx-background-color: #66cc00;" text="Price" />
+                  <TableColumn prefWidth="57.39996337890625" style="-fx-background-color: #66cc00;" text="Number" />
+                  <TableColumn fx:id="evaluationColumn" prefWidth="91.4000244140625" style="-fx-background-color: #66cc00;" text="Evaluation" />
+              </columns>
+            </TableView>
+            <ScrollBar layoutX="605.0" layoutY="13.0" orientation="VERTICAL" prefHeight="309.0" prefWidth="14.0" style="-fx-background-color: #66cc00;" />
+            <Button fx:id="goToComment" layoutX="579.0" layoutY="12.0" mnemonicParsing="false" onAction="#goToCommentOnAction" prefHeight="26.0" prefWidth="26.0" style="-fx-background-color: #66cc00;" text="+" />
+         </children></AnchorPane>
+   </center>
+</BorderPane>
