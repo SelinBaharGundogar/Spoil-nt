@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="519.0" prefWidth="764.0" style="-fx-background-color: #fffbe7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RemoveItemController">
+   <children>
+      <Label alignment="CENTER" layoutX="132.0" layoutY="20.0" prefHeight="77.0" prefWidth="440.0" text="Remove Item">
+         <font>
+            <Font size="51.0" />
+         </font>
+      </Label>
+      <Separator layoutX="207.0" layoutY="95.0" prefHeight="4.0" prefWidth="291.0" />
+      <Button fx:id="toMainPageButton" layoutX="592.0" layoutY="46.0" mnemonicParsing="false" onAction="#toMainPageButtonOnAction" style="-fx-background-color: #66cc00;" text="Return to Main Page" />
+      <TableView layoutX="65.0" layoutY="132.0" prefHeight="321.0" prefWidth="662.0">
+        <columns>
+          <TableColumn prefWidth="59.399993896484375" text="Category" />
+          <TableColumn prefWidth="91.80001068115234" text="Product Name" />
+            <TableColumn prefWidth="92.20001220703125" text="Expiration Date" />
+            <TableColumn prefWidth="90.20001220703125" text="Unit Measure" />
+            <TableColumn prefWidth="86.5999755859375" text="Quantity Left" />
+            <TableColumn prefWidth="150.20004272460938" text="Increment/Decrement" />
+            <TableColumn prefWidth="89.0" text="Remove" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
