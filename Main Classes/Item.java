@@ -3,7 +3,7 @@ import java.util.Date;
 
 /**
  * This class creates the basis of all item classees.
- * @version 18 July, 2021
+ * @version 20 July, 2021
  * @author Selin Bahar Gündoğar
  */
 public class Item implements Comparable{
@@ -15,13 +15,13 @@ public class Item implements Comparable{
     private String measure;
     private double amount;
     private boolean selected;
-    private ArrayList<Comment> itemComment;
-    
+    private Comment itemComment;
+
     /**
      * This constructor creates an Item
      * @param name, dueDate, category, brand, price, measure, amount, itemComment
      */
-    public Item(String name, Date dueDate, String category, String brand, double price, String measure, double amount, ArrayList<Comment> itemComment) {
+    public Item(String name, Date dueDate, String category, String brand, double price, String measure, double amount, Comment itemComment) {
         this.name = name;
         this.dueDate = dueDate;
         this.category = category;
@@ -192,5 +192,9 @@ public class Item implements Comparable{
             }
         }
         return 0;
+    }
+
+    public String toString(){
+        return getName() + "/" + getDueDate() + "/" + getCategory() + "/" + getBrand() + "/" + getPrice() + "/" + getMeasure() + "/" + getAmount() + "/" + itemComment.toString();
     }
 }
