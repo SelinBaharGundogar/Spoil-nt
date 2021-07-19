@@ -1,16 +1,18 @@
+import java.util.ArrayList;
 /**
- * This class creates market user extending the user abstract class
- * @version 18 July, 2021
- * @author Parsa Keihan
+ * This  class creates a basket.
+ * @version 19 July, 2021
+ * @author Selin Bahar Gündoğar and Parsa Keihan
  */
-public class MarketUser extends User{
+public class CostumerUser extends User {
 
     //Properties
-    String marketName;
+    ArrayList<Item> currentItems;
+    String userName;
 
     //Constructor
     /**
-     * This constructor creates a market user instance
+     * This constructor creates a costumer user instance
      * @param email
      * @param password
      * @param ID
@@ -18,29 +20,26 @@ public class MarketUser extends User{
      * @param basketOfTheUser
      * @param anAddress
      */
-    public MarketUser(String email, String password, int ID, Item usersItem, Basket basketOfTheUser, Address anAddress, String marketName) {
+    public CostumerUser(String email, String password, int ID, Item usersItem, Basket basketOfTheUser, Address anAddress, String userName) {
         super(email, password, ID, usersItem, basketOfTheUser, anAddress);
-        this.marketName = marketName;
+        this.userName = userName;
+        currentItems = new ArrayList<Item>();
     }
 
     /**
-     * gets the specified market's name
-     * @return the name of the market
+     * sets the username for an individual
+     * @param userName
      */
-    public String getMarketName() {
-        return marketName;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     /**
-     * assigns a name to the specified market
-     * @param marketName
+     * gets the username of a specified costumer
+     * @return
      */
-    public void setMarketName(String marketName) {
-        this.marketName = marketName;
+    public String getUserName() {
+        return userName;
     }
-
-    @Override
-    public int compareTo(Object o) {
-        return 0;
-    }
+    
 }
