@@ -42,4 +42,9 @@ public class CostumerUser extends User {
         return userName;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "/" + getUserName() + "/" + currentItems.toString();
+    }
+
 }
