@@ -1,7 +1,7 @@
 /**
  * This is a comment class to let each user comment about their shopping experiences
  * @version 18 July, 2021
- * @author Parsa Keihan
+ * @author Parsa Keihan, Selin Bahar Gundogar
  */
 public class Comment {
 
@@ -11,7 +11,7 @@ public class Comment {
     int dislike;
     int servicePoint;
     int freshnessPoint;
-    MarekUser marketUser;
+    MarkekUser marketUser;
     CostumerUser costumerUser;
 
     //Constructor
@@ -22,7 +22,7 @@ public class Comment {
      * @param dislike
      * @param servicePoint
      * @param freshnessPoint
-     * @param marekUser
+     * @param marketUser
      */
     public Comment(String text, int like, int dislike, int servicePoint, int freshnessPoint, MarekUser marketUser, CostumerUser costumerUser){
         this.text = text;
@@ -32,7 +32,6 @@ public class Comment {
         this.freshnessPoint = freshnessPoint;
         this.marketUser = marketUser;
         this.costumerUser = costumerUser;
-        this.name = null;
     }
 
     //methods
@@ -67,15 +66,7 @@ public class Comment {
     public int getFreshnessPoint() {
         return freshnessPoint;
     }
-
-    /**
-     * gets the name of the costumer who made the comment
-     * @return the name
-     */
-    public String getName(){
-        return costumerUser.getName();
-    }
-
+    
     /**
      * gets the like numbers
      * @return the like numbers
@@ -114,7 +105,4 @@ public class Comment {
         return (getFreshnessPoint() + getServicePoint()) / 2;
     }
 
-    public void display(){
-        System.out.println(getComment() + getName() + calculateAverages() + getLike() + getDislike(););
-    }
 }
