@@ -2,7 +2,7 @@ import java.util.Date;
 
 /**
  * This class extends Item.
- * @version 18 July, 2021
+ * @version 20 July, 2021
  * @author Selin Bahar Gündoğar
  */
 public class PastItem {
@@ -51,4 +51,9 @@ public class PastItem {
     public boolean getRemoved(){
         return removed;
     }
+    
+    public String toString() {
+        return super.toString() + "/" + getSold() + "/" + getRemoved();
+    }
 }
+
