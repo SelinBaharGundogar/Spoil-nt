@@ -1,3 +1,4 @@
+
 /**
  * This abstract class creates the basis of all user types.
  * @version 19 July, 2021
@@ -8,7 +9,7 @@ public abstract class User implements Comparable {
     private String password;
     private int ID;
     private Item usersItem;
-    private Basket baskedOfTheUser;
+    private Basket basketOfTheUser;
     private Address anAddress;
     /**
      * This constructor creates a user instance
@@ -19,7 +20,7 @@ public abstract class User implements Comparable {
         this.password = password;
         this.ID = ID;;
         this.usersItem = usersItem;
-        this.baskedOfTheUser = basketOfTheUser;
+        this.basketOfTheUser = basketOfTheUser;
         this.anAddress = anAddress;
     }
 
@@ -48,7 +49,17 @@ public abstract class User implements Comparable {
     public void setPassword( String password) {
         this.password = password;
     }
-    
+
+
+    /**
+     * This method returns the password
+     * @return the password
+     */
+    public String getPassword() {
+        return password;
+    }
+
+
     /**
      * This method returns the ID
      * @return the name of the ID
@@ -56,7 +67,7 @@ public abstract class User implements Comparable {
     public int getID(){
         return ID;
     }
-    
+
     /**
      * This method returns the address
      * @return the name of the address
@@ -64,7 +75,7 @@ public abstract class User implements Comparable {
     public Address getAddress(){
         return anAddress;
     }
-    
+
     /**
      * This method sets the new address
      * @param anAddress
@@ -89,5 +100,10 @@ public abstract class User implements Comparable {
             }
         }
         return 0;
+    }
+
+
+    public String toString(){
+        return getEmail() + "/" + getPassword() + "/" + getID() + "/" + usersItem.toString() + "/" + basketOfTheUser.toString() + "/" + anAddress.toString();
     }
 }
