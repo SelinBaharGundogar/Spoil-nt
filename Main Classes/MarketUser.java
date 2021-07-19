@@ -1,7 +1,7 @@
 /**
  * This class creates market user extending the user abstract class
- * @version 19 July, 2021
- * @author Parsa Keihan and Selin Bahar Gundogar
+ * @version 18 July, 2021
+ * @author Parsa Keihan
  */
 public class MarketUser extends User{
 
@@ -37,5 +37,21 @@ public class MarketUser extends User{
      */
     public void setMarketName(String marketName) {
         this.marketName = marketName;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if ( o instanceof MarketUser ) {
+            MarketUser anotherObject = (MarketUser) o;
+            if ( this.getID() > anotherObject.getID()) {
+                return
+            }
+        }
+        return 0;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "/" + getMarketName();
     }
 }
