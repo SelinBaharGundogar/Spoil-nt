@@ -15,13 +15,13 @@ public class Item implements Comparable{
     private String measure;
     private double amount;
     private boolean selected;
-    private Comment itemComment;
+    private ArrayList<Comment> itemComment;
     
     /**
      * This constructor creates an Item
      * @param name, dueDate, category, brand, price, measure, amount, itemComment
      */
-    public Item(String name, Date dueDate, String category, String brand, double price, String measure, double amount, Comment itemComment) {
+    public Item(String name, Date dueDate, String category, String brand, double price, String measure, double amount, ArrayList<Comment> itemComment) {
         this.name = name;
         this.dueDate = dueDate;
         this.category = category;
