@@ -1,6 +1,10 @@
 import java.util.ArrayList;
-
-public class CostumerUser extends User implements Comparable{
+/**
+ * This  class creates a basket.
+ * @version 19 July, 2021
+ * @author Selin Bahar Gündoğar and Parsa Keihan
+ */
+public class CostumerUser extends User {
 
     //Properties
     ArrayList<Item> currentItems;
@@ -38,8 +42,4 @@ public class CostumerUser extends User implements Comparable{
         return userName;
     }
 
-    @Override
-    public int compareTo(Object o) {
-        return 0;
-    }
 }
