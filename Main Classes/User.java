@@ -1,6 +1,6 @@
 /**
  * This abstract class creates the basis of all user types.
- * @version 18 July, 2021
+ * @version 19 July, 2021
  * @author Selin Bahar Gündoğar, Parsa Keihan
  */
 public abstract class User implements Comparable {
@@ -48,6 +48,7 @@ public abstract class User implements Comparable {
     public void setPassword( String password) {
         this.password = password;
     }
+    
     /**
      * This method returns the ID
      * @return the name of the ID
@@ -55,6 +56,7 @@ public abstract class User implements Comparable {
     public int getID(){
         return ID;
     }
+    
     /**
      * This method returns the address
      * @return the name of the address
@@ -62,6 +64,7 @@ public abstract class User implements Comparable {
     public Address getAddress(){
         return anAddress;
     }
+    
     /**
      * This method sets the new address
      * @param anAddress
@@ -69,5 +72,22 @@ public abstract class User implements Comparable {
      */
     public void setAddress( Address anAddress) {
         this.anAddress = anAddress;
+    }
+
+    @Override
+    public int compareTo( Object obj) {
+        if ( obj instanceof User ) {
+            User newObj = (User) obj;
+            if ( this.getID() > newObj.getID() ) {
+                return 1;
+            }
+            else if ( this.getID() < newObj.getID() ) {
+                return -1;
+            }
+            else if (  this.getID() == newObj.getID() ) {
+                return 0;
+            }
+        }
+        return 0;
     }
 }
