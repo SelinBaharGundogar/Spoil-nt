@@ -1,8 +1,15 @@
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
 /**
  * This class is to store the items input data
  * @version 19 July, 2021
- * @author Ahmet Arda Ceylan
+ * @author Ahmet Arda Ceylan, Selin Bahar Gundogar, Parsa Keihan
  */
 public class ItemContainer {
 
@@ -39,8 +46,8 @@ public class ItemContainer {
     public static void addItemsList(Item item) {
         itemsList.add(item);
         try (FileWriter f = new FileWriter("ItemsList.txt", true); BufferedWriter b = new BufferedWriter(f); PrintWriter p = new PrintWriter(b);)
-        { 
-            p.println(item.toString()); 
+        {
+            p.println(item.toString());
         } catch (IOException i)
         { i.printStackTrace(); }
 
@@ -54,41 +61,66 @@ public class ItemContainer {
     public static void addItemsList(PastItem pastItem) {
         pastItemsList.add(pastItem);
         try (FileWriter f = new FileWriter("PastItemsList.txt", true); BufferedWriter b = new BufferedWriter(f); PrintWriter p = new PrintWriter(b);)
-        { 
-            p.println(pastItem.toString()); 
+        {
+            p.println(pastItem.toString());
         } catch (IOException i)
         { i.printStackTrace(); }
 
     }
-    
-    
+
+
     /**
-     * This method removes items from the file 
+     * This method removes items from the file
      * @param items
      * @return null
-     */    
+     */
     public static void removeItem(Item item) throws IOException
     {
         File file = new File("ItemsList.txt");
         List<String> out = Files.lines(file.toPath())
-                        .filter(line -> !line.contains(item.toString()))
-                        .collect(Collectors.toList());
+                .filter(line -> !line.contains(item.toString()))
+                .collect(Collectors.toList());
         Files.write(file.toPath(), out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
     }
-    
-     /**
-     * This method removes PastItems from the file 
-     * @param PastItems
+
+    /**
+     * This method removes PastItems from the file
+     * @param pastItem
      * @return null
-     */    
+     */
     public static void removePastItem(PastItem pastItem) throws IOException
     {
         File file = new File("PastItemsList.txt");
         List<String> out = Files.lines(file.toPath())
-                        .filter(line -> !line.contains(pastItem.toString()))
-                        .collect(Collectors.toList());
+                .filter(line -> !line.contains(pastItem.toString()))
+                .collect(Collectors.toList());
         Files.write(file.toPath(), out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
     }
 
+    public static String getItem(Item item) throws IOException
+    {
+        File file = new File("ItemsList.txt");
+        Scanner scan = new Scanner(file);
+
+        while (scan.hasNextLine()) {
+            if (scan.nextLine().equals(item.toString()) ) {
+                return scan.nextLine();
+            }
+        }
+        return "hi";
+    }
+
+    public static String getPastItem(PastItem pastItem) throws IOException
+    {
+        File file = new File("PastItemsList.txt");
+        Scanner scan = new Scanner(file);
+
+        while (scan.hasNextLine()) {
+            if (scan.nextLine().equals(pastItem.toString()) ) {
+                return scan.nextLine();
+            }
+        }
+        return "hi";
+    }
 
 }
