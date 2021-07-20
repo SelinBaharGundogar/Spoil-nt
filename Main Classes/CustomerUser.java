@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * @version 19 July, 2021
  * @author Selin Bahar Gündoğar and Parsa Keihan
  */
-public class CostumerUser extends User {
+public class CustomerUser extends User {
 
     //Properties
     ArrayList<Item> currentItems;
@@ -20,7 +20,7 @@ public class CostumerUser extends User {
      * @param basketOfTheUser
      * @param anAddress
      */
-    public CostumerUser(String email, String password, int ID, Item usersItem, Basket basketOfTheUser, Address anAddress, String userName) {
+    public CustomerUser(String email, String password, int ID, Item usersItem, Basket basketOfTheUser, Address anAddress, String userName) {
         super(email, password, ID, usersItem, basketOfTheUser, anAddress);
         this.userName = userName;
         currentItems = new ArrayList<Item>();
