@@ -1,15 +1,15 @@
 
 /**
  * This abstract class creates the basis of all user types.
- * @version 19 July, 2021
+ * @version 20 July, 2021
  * @author Selin Bahar Gündoğar, Parsa Keihan
  */
 public abstract class User implements Comparable {
     private String email;
     private String password;
-    private int ID;
+    private static int ID;
     private Item usersItem;
-    private Basket basketOfTheUser;
+     Basket basketOfTheUser;
     private Address anAddress;
     /**
      * This constructor creates a user instance
@@ -18,7 +18,7 @@ public abstract class User implements Comparable {
     public User( String email, String password, int ID, Item usersItem, Basket basketOfTheUser, Address anAddress){
         this.email = email;
         this.password = password;
-        this.ID = ID;;
+        this.ID = ID;
         this.usersItem = usersItem;
         this.basketOfTheUser = basketOfTheUser;
         this.anAddress = anAddress;
@@ -85,6 +85,10 @@ public abstract class User implements Comparable {
         this.anAddress = anAddress;
     }
 
+    public Basket getBasket(){
+        return basketOfTheUser;
+    }
+    
     @Override
     public int compareTo( Object obj) {
         if ( obj instanceof User ) {
@@ -104,6 +108,6 @@ public abstract class User implements Comparable {
 
 
     public String toString(){
-        return getEmail() + "/" + getPassword() + "/" + getID() + "/" + usersItem.toString() + "/" + basketOfTheUser.toString() + "/" + anAddress.toString();
+        return getEmail() + "/" + getPassword() + "/" + getID() + "/" + usersItem.toString() + "/" + getBasket() + "/" + getAddress();
     }
 }
