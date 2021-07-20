@@ -41,6 +41,13 @@ public class UserContainer {
      */
     public static void addCustomerUser(CustomerUser customerUser){
         customerUsersList.add(customerUser);
+        try (FileWriter f = new FileWriter("CustomerUsers.txt", true); BufferedWriter b = new BufferedWriter(f); PrintWriter p = new PrintWriter(b);)
+        { 
+            p.println(customerUser.toString()); 
+        } catch (IOException i)
+        { i.printStackTrace(); }
+
+Read more: https://www.java67.com/2015/07/how-to-append-text-to-existing-file-in-java-example.html#ixzz718F8n3lj
     }
 
     /**
@@ -50,6 +57,44 @@ public class UserContainer {
      */
     public static void addMarketUser(MarketUser marketUser){
         marketUsersList.add(marketUser);
+        public static void addCustomerUser(CustomerUser customerUser){
+        customerUsersList.add(customerUser);
+        try (FileWriter f = new FileWriter("MarketUsers.txt", true); BufferedWriter b = new BufferedWriter(f); PrintWriter p = new PrintWriter(b);)
+        { 
+            p.println(marketUser.toString()); 
+        } catch (IOException i)
+        { i.printStackTrace(); }
     }
+        
+     /**
+     * This method removes marketUsers from the file 
+     * @param marketUser
+     * @return null
+     */    
+    public static void removeMarketUser(MarketUser marketUser) throws IOException
+    {
+        File file = new File("MarketUsers.txt");
+        List<String> out = Files.lines(file.toPath())
+                        .filter(line -> !line.contains(marketUser.toString()))
+                        .collect(Collectors.toList());
+        Files.write(file.toPath(), out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
+    }
+        
+    /**
+     * This method removes customerUsers from the file 
+     * @param customerUser
+     * @return null
+     */    
+    public static void removeMarketUser(CustomerUser customerUser) throws IOException
+    {
+        File file = new File("CustomerUsers.txt");
+        List<String> out = Files.lines(file.toPath())
+                        .filter(line -> !line.contains(customerUser.toString()))
+                        .collect(Collectors.toList());
+        Files.write(file.toPath(), out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
+    }    
+        
+    
+    }    
 
 }
