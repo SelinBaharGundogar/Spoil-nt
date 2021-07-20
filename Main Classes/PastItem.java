@@ -18,6 +18,7 @@ public class PastItem {
         this.anItem = anItem;
         this.sold = sold;
         this.removed = removed;
+        ItemContainer.addItemsList(this);
     }
 
     /**
