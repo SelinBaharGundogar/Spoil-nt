@@ -83,7 +83,7 @@ Read more: https://www.java67.com/2015/07/how-to-append-text-to-existing-file-in
      * @param customerUser
      * @return null
      */    
-    public static void removeMarketUser(CustomerUser customerUser) throws IOException
+    public static void removeCustomerUser(CustomerUser customerUser) throws IOException
     {
         File file = new File("CustomerUsers.txt");
         List<String> out = Files.lines(file.toPath())
