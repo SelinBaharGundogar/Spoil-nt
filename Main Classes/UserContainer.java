@@ -57,8 +57,6 @@ Read more: https://www.java67.com/2015/07/how-to-append-text-to-existing-file-in
      */
     public static void addMarketUser(MarketUser marketUser){
         marketUsersList.add(marketUser);
-        public static void addCustomerUser(CustomerUser customerUser){
-        customerUsersList.add(customerUser);
         try (FileWriter f = new FileWriter("MarketUsers.txt", true); BufferedWriter b = new BufferedWriter(f); PrintWriter p = new PrintWriter(b);)
         { 
             p.println(marketUser.toString()); 
