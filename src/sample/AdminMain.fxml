@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="498.0" prefWidth="761.0" style="-fx-background-color: #fffbe7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminMainController">
+   <children>
+      <Label alignment="CENTER" layoutX="30.0" layoutY="14.0" prefHeight="40.0" prefWidth="143.0" style="-fx-background-color: #66cc00;" text="Personal Information">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="89.0" prefHeight="22.0" prefWidth="52.0" style="-fx-background-color: #66cc00;" text="Name" />
+      <Label alignment="CENTER" layoutX="13.0" layoutY="121.0" prefHeight="22.0" prefWidth="52.0" style="-fx-background-color: #66cc00;" text="ID" />
+      <Label alignment="CENTER" layoutX="13.0" layoutY="153.0" prefHeight="22.0" prefWidth="52.0" style="-fx-background-color: #66cc00;" text="Password" />
+      <Label alignment="CENTER" layoutX="76.0" layoutY="121.0" prefHeight="22.0" prefWidth="82.0" text="1234567" />
+      <TextField fx:id="name" layoutX="76.0" layoutY="88.0" prefHeight="26.0" prefWidth="98.0" />
+      <Button layoutX="12.0" layoutY="191.0" mnemonicParsing="false" onAction="#updateButtonOnAction" style="-fx-background-color: #66cc00;" text="Update" />
+      <SplitPane dividerPositions="0.5" layoutX="174.0" prefHeight="498.0" prefWidth="5.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.7" layoutX="-8.0" layoutY="229.0" orientation="VERTICAL" prefHeight="12.0" prefWidth="187.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+        </items>
+      </SplitPane>
+      <Label alignment="CENTER" layoutX="21.0" layoutY="265.0" prefHeight="40.0" prefWidth="143.0" style="-fx-background-color: #66cc00;" text="Statistics">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="56.0" layoutY="339.0" prefHeight="22.0" prefWidth="73.0" style="-fx-background-color: #66cc00;" text="User Count" />
+      <Label alignment="CENTER" layoutX="51.0" layoutY="379.0" prefHeight="22.0" prefWidth="82.0" text="1756" />
+      <Label alignment="CENTER" layoutX="51.0" layoutY="412.0" prefHeight="22.0" prefWidth="82.0" style="-fx-background-color: #66cc00;" text="Market Count" />
+      <Label alignment="CENTER" layoutX="51.0" layoutY="452.0" prefHeight="22.0" prefWidth="82.0" text="20" />
+      <Label alignment="CENTER" layoutX="242.0" layoutY="14.0" prefHeight="40.0" prefWidth="143.0" style="-fx-background-color: #66cc00;" text="Maintainance">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="192.0" layoutY="61.0" prefHeight="174.0" prefWidth="243.0" />
+      <Button layoutX="258.0" layoutY="272.0" mnemonicParsing="false" onAction="#maintainanceButtonOnAction" style="-fx-background-color: #66cc00;" text="Run Maintainance" />
+      <TextArea fx:id="notificationTextArea" layoutX="447.0" layoutY="66.0" prefHeight="154.0" prefWidth="278.0" />
+      <Label alignment="CENTER" layoutX="499.0" layoutY="14.0" prefHeight="40.0" prefWidth="143.0" style="-fx-background-color: #66cc00;" text="Send Notifications">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="customerCheckBox" layoutX="500.0" layoutY="226.0" mnemonicParsing="false" text="Customers" />
+      <CheckBox fx:id="marketCheckBox" layoutX="602.0" layoutY="226.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="79.0" text="Markets" />
+      <Button layoutX="563.0" layoutY="272.0" mnemonicParsing="false" onAction="#notificationButtonOnAction" style="-fx-background-color: #66cc00;" text="Send!" />
+      <Button layoutX="680.0" layoutY="21.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" style="-fx-background-color: #66cc00;" text="LogOut" />
+      <Separator layoutX="182.0" layoutY="301.0" prefHeight="4.0" prefWidth="581.0" />
+      <TextField layoutX="293.0" layoutY="326.0" prefHeight="26.0" prefWidth="98.0" />
+      <ListView layoutX="214.0" layoutY="365.0" prefHeight="126.0" prefWidth="251.0" />
+      <Label alignment="CENTER" layoutX="178.0" layoutY="328.0" prefHeight="22.0" prefWidth="98.0" text="Customer Name" />
+      <Button layoutX="407.0" layoutY="326.0" mnemonicParsing="false" style="-fx-background-color: #66cc00;" text="Search" />
+      <Label alignment="CENTER" layoutX="479.0" layoutY="327.0" prefHeight="22.0" prefWidth="98.0" text="Market Name" />
+      <TextField layoutX="577.0" layoutY="325.0" prefHeight="26.0" prefWidth="98.0" />
+      <Button layoutX="699.0" layoutY="326.0" mnemonicParsing="false" style="-fx-background-color: #66cc00;" text="Search" />
+      <ListView layoutX="500.0" layoutY="365.0" prefHeight="126.0" prefWidth="251.0" />
+      <Label fx:id="maintainance" alignment="CENTER" layoutX="192.0" layoutY="244.0" prefHeight="22.0" prefWidth="243.0" textFill="#0051ff" />
+      <Label fx:id="notification" alignment="CENTER" layoutX="464.0" layoutY="244.0" prefHeight="22.0" prefWidth="243.0" textFill="#0033ea" />
+      <Label fx:id="updateLabel" alignment="CENTER" layoutX="76.0" layoutY="192.0" prefHeight="22.0" prefWidth="82.0" textFill="#005dfd" />
+      <PasswordField fx:id="password" layoutX="76.0" layoutY="151.0" prefHeight="26.0" prefWidth="98.0" />
+   </children>
+</AnchorPane>
