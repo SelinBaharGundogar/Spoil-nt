@@ -21,6 +21,7 @@ public class MarketUser extends User{
     public MarketUser(String email, String password, int ID, Item usersItem, Basket basketOfTheUser, Address anAddress, String marketName) {
         super(email, password, ID, usersItem, basketOfTheUser, anAddress);
         this.marketName = marketName;
+        UserContainer.addMarketUser(this);
     }
 
     /**
