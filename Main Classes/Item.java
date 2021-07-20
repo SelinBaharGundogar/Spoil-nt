@@ -31,6 +31,7 @@ public class Item implements Comparable{
         this.amount = amount;
         this.itemComment = itemComment;
         selected = false;
+        ItemContainer.addItemsList(this);
     }
 
     /**
