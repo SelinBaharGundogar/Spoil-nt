@@ -23,6 +23,7 @@ public class CustomerUser extends User {
     public CustomerUser(String email, String password, int ID, Item usersItem, Basket basketOfTheUser, Address anAddress, String userName) {
         super(email, password, ID, usersItem, basketOfTheUser, anAddress);
         this.userName = userName;
+        UserContainer.addCustomerUser(this);
         currentItems = new ArrayList<Item>();
     }
 
