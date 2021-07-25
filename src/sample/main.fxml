@@ -4,7 +4,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="725.0" style="-fx-background-color: #fffbe7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="725.0" style="-fx-background-color: #fffbe7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CustomerMainPageController">
    <top>
       <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #66cc00;" BorderPane.alignment="CENTER">
         <items>
@@ -20,15 +20,15 @@
          <children>
             <ImageView fitHeight="97.0" fitWidth="109.0" layoutX="52.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Images/profile.png" />
+                   <Image url="@../Images/profile.png" />
                </image>
             </ImageView>
             <Label layoutX="24.0" layoutY="133.0" prefHeight="18.0" prefWidth="19.0" text="ID:" />
-            <Label layoutX="73.0" layoutY="134.0" prefHeight="18.0" prefWidth="113.0" />
+            <Label fx:id="idLabel" layoutX="73.0" layoutY="134.0" prefHeight="18.0" prefWidth="113.0" />
             <Label layoutX="20.0" layoutY="160.0" text="Username:" />
-            <Label layoutX="86.0" layoutY="160.0" prefHeight="18.0" prefWidth="104.0" />
+            <Label fx:id="userNameLabel" layoutX="86.0" layoutY="160.0" prefHeight="18.0" prefWidth="104.0" />
             <TableView layoutY="199.0" prefHeight="222.0" prefWidth="202.0" style="-fx-background-color: #fffbe7;">
-              <columns>
+               <columns>
                 <TableColumn prefWidth="199.1999877691269" style="-fx-background-color: #66cc00;" text="Month's Most Helpful Markets" />
               </columns>
             </TableView>
@@ -40,11 +40,6 @@
       <AnchorPane prefHeight="424.0" prefWidth="312.0" BorderPane.alignment="CENTER">
          <children>
             <TextField layoutX="60.0" layoutY="14.0" promptText="search..." />
-            <TableView layoutY="47.0" prefHeight="430.0" prefWidth="302.0" style="-fx-background-color: #fffbe7;">
-              <columns>
-                <TableColumn prefWidth="301.59997560977934" style="-fx-background-color: #66cc00;" text="Categories" />
-              </columns>
-            </TableView>
             <AnchorPane layoutX="284.0" prefHeight="473.0" prefWidth="239.0">
                <children>
                   <TableView layoutX="20.0" layoutY="14.0" prefHeight="161.0" prefWidth="200.0" style="-fx-background-color: #fffbe7;">
@@ -54,7 +49,8 @@
                   </TableView>
                   <ImageView fitHeight="87.0" fitWidth="92.0" layoutX="76.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../Images/basket.png" />
+                         <Image url="@../Images/basket.png" />
+
                      </image>
                   </ImageView>
                   <TableView layoutX="21.0" layoutY="273.0" prefHeight="201.0" prefWidth="200.0" style="-fx-background-color: #fffbe7;">
@@ -65,6 +61,11 @@
                   </TableView>
                </children>
             </AnchorPane>
+            <Label layoutX="47.0" layoutY="91.0" prefHeight="18.0" prefWidth="206.0" text="                 Categorization" />
+            <Button fx:id="Dairy" layoutX="5.0" layoutY="145.0" mnemonicParsing="false" onAction="#DairyButtonOnAction" prefHeight="78.0" prefWidth="296.0" text="Dairy Products" />
+            <Button fx:id="Bakery" layoutX="5.0" layoutY="301.0" mnemonicParsing="false" onAction="#BakeryButtonOnAction" prefHeight="78.0" prefWidth="296.0" text="Snacks" />
+            <Button fx:id="Snacks" layoutX="5.0" layoutY="223.0" mnemonicParsing="false" onAction="#SnacksButtonOnAction" prefHeight="78.0" prefWidth="296.0" text="Bakery Products" />
+            <Button fx:id="Fruits" layoutX="5.0" layoutY="379.0" mnemonicParsing="false" onAction="#FruitsButtonOnAction" prefHeight="78.0" prefWidth="296.0" text="Button" />
          </children>
       </AnchorPane>
    </center>

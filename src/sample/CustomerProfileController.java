@@ -43,6 +43,8 @@ public class CustomerProfileController implements Initializable
     @FXML
     private TextField number;
     @FXML
+    private TextField password;
+    @FXML
     private TextField address;
     @FXML
     private Button nameEdit;
@@ -67,6 +69,8 @@ public class CustomerProfileController implements Initializable
         File profileFile = new File("Images/profile.png");
         javafx.scene.image.Image profileImage = new Image(profileFile.toURI().toString());
         profileView.setImage(profileImage);
+
+
     }
 
     /*public ObservableList<PastProducts> getPastProducts(){

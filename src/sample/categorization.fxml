@@ -31,19 +31,20 @@
             <Label fx:id="categoryName" layoutX="73.0" layoutY="71.0" prefHeight="18.0" prefWidth="116.0" />
             <AnchorPane layoutX="198.0" layoutY="68.0" prefHeight="424.0" prefWidth="255.0">
                <children>
-                  <TableView prefHeight="425.0" prefWidth="354.0" style="-fx-background-color: #fffbe7;">
+                  <TableView fx:id="view" prefHeight="425.0" prefWidth="354.0" style="-fx-background-color: #fffbe7;">
                     <columns>
-                      <TableColumn prefWidth="64.5999755859375" style="-fx-background-color: #66cc00;" text="Name" />
-                      <TableColumn prefWidth="64.20001220703125" style="-fx-background-color: #66cc00;" text="Market" />
-                        <TableColumn prefWidth="75.0" style="-fx-background-color: #66cc00;" text="Expire Date" />
-                        <TableColumn prefWidth="62.20001220703125" style="-fx-background-color: #66cc00;" text="Price" />
-                        <TableColumn prefWidth="88.19998168945312" style="-fx-background-color: #66cc00;" text="Comments" />
+                      <TableColumn fx:id="nameC" prefWidth="64.5999755859375" style="-fx-background-color: #66cc00;" text="Name" />
+                        <!-- <TableColumn fx:id="marketC" prefWidth="64.20001220703125" style="-fx-background-color: #66cc00;" text="Market" />
+                           <TableColumn fx:id="expireDateC" prefWidth="75.0" style="-fx-background-color: #66cc00;" text="Expire Date" />
+                           <TableColumn fx:id="priceC" prefWidth="148.79996337890623" style="-fx-background-color: #66cc00;" text="Price" />
+
+                           <TableColumn fx:id="evaluationC" prefWidth="88.19998168945312" style="-fx-background-color: #66cc00;" text="Comments" />-->
                     </columns>
                   </TableView>
                </children>
             </AnchorPane>
             <ImageView fitHeight="106.0" fitWidth="111.0" layoutX="45.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" />
-            <ScrollBar layoutX="552.0" layoutY="68.0" orientation="VERTICAL" prefHeight="424.0" prefWidth="14.0" style="-fx-background-color: #66cc00;" />
+            <ScrollBar layoutX="552.0" layoutY="112.0" orientation="VERTICAL" prefHeight="424.0" prefWidth="14.0" style="-fx-background-color: #66cc00;" />
             <TableView layoutX="572.0" layoutY="59.0" prefHeight="155.0" prefWidth="200.0" style="-fx-background-color: #fffbe7;">
               <columns>
                 <TableColumn prefWidth="199.199951171875" style="-fx-background-color: #66cc00;" text=" Most Discounted" />
@@ -58,7 +59,7 @@
             <ScrollBar layoutX="765.0" layoutY="335.0" orientation="VERTICAL" prefHeight="153.0" prefWidth="14.0" style="-fx-background-color: #66cc00;" />
             <ImageView fitHeight="110.0" fitWidth="149.0" layoutX="617.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../Images/basket.png" />
+                  <Image url="@../../Images/basket.png" />
                </image></ImageView>
          </children>
       </AnchorPane>

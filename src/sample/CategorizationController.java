@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -15,6 +20,7 @@ import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 /**
@@ -25,10 +31,26 @@ import java.util.ResourceBundle;
 public class CategorizationController implements Initializable
 {
     // variables
+
+
+    @FXML
+    public static TableView<Item> view;
     @FXML
     private ImageView categorizationView = new ImageView();
     @FXML
-    private Label categoryName;
+    private  Label categoryName;
+    @FXML
+    private TableColumn<Item, SimpleStringProperty> nameC;
+    /*@FXML
+    private TableColumn<Item, String> marketC;
+    @FXML
+    private TableColumn<Item, Date> expireDateC;
+    @FXML
+    private TableColumn<Item, Double> priceC;*/
+    //@FXML
+    //private TableColumn<Item, Comment> evaluationC;
+   // @FXML
+    //private TableColumn<Comment, Comment> evaluationC;
 
     /**
      * This method initializes the categorization page
@@ -36,9 +58,21 @@ public class CategorizationController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        categoryName.setText(CustomerMainPageController.categoryString);
+        System.out.println(CustomerMainPageController.categoryString);
+        System.out.println(CustomerMainPageController.list.get(0).getName());
+        view = new TableView<>();
         File categorizationFile = new File("Images/basket.jpeg");
         Image categorizationImage = new Image(categorizationFile.toURI().toString());
         categorizationView.setImage(categorizationImage);
+
+
+        nameC.setCellValueFactory(new PropertyValueFactory<Item, SimpleStringProperty>("name"));
+        //marketC.setCellValueFactory(new PropertyValueFactory<Item, String>("brand"));
+        //expireDateC.setCellValueFactory(new PropertyValueFactory<Item, Date>("dueDate"));
+       // priceC.setCellValueFactory(new PropertyValueFactory<Item, Double>("price"));
+        //evaluationC.setCellValueFactory(new PropertyValueFactory<Item, Comment>("totalPoint"));
+        view.setItems(CustomerMainPageController.list);
     }
 
     /**

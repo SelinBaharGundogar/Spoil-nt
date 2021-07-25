@@ -56,9 +56,12 @@ public class RegisterController implements Initializable
     private Label passwordWarningLabel;
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        UserContainer userContainer = new UserContainer();
         File registerFile = new File("Images/register.jpeg");
         Image registerImage = new Image(registerFile.toURI().toString());
         registerView.setImage(registerImage);
+
+
     }
 
     public void registerButtonOnAction(ActionEvent event)
@@ -82,6 +85,15 @@ public class RegisterController implements Initializable
             registerMessageLabel.setText("User has been registered successfully!");
             registerUser(event);
         }
+
+        CustomerUser user = new CustomerUser(emailTextField.getText(), passwordTextField.getText(), 0, adressTextArea.getText(), userNameTextField.getText());
+        System.out.println(user.toString());
+        UserContainer.customerUsersList.add(user);
+        System.out.println(UserContainer.customerUsersList.get(0));
+        UserContainer.currentUser = user;
+        System.out.println(UserContainer.currentUser);
+        System.out.println(UserContainer.customerUsersList.get(0).getID());
+        System.out.println(UserContainer.customerUsersList.get(0).getUsername());
 
     }
 

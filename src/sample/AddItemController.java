@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 /**
@@ -52,34 +53,18 @@ public class AddItemController implements Initializable
      */
     public void addButtonOnAction(ActionEvent event)
     {
-        if ( dateOfEx.getValue() != null)
-        {
-            if ( dateOfEx.getValue().isBefore(LocalDate.now()))
-            {
-                addItemMessageLabel.setText("The date you entered should be in future!");
-            }
-        }
-        else if (category.getItems() == null)
-        {
-            addItemMessageLabel.setText("Add an item to category!");
-        }
-        else if (name.getText().isBlank() || quantity.getText().isBlank()  || price.getText().isBlank() || brandName.getText().isBlank())
-        {
 
-            addItemMessageLabel.setText("Must fill all the details about the item!");
-        }
-        else if ( Double.parseDouble(price.getText()) < 0)
-        {
-            addItemMessageLabel.setText("Price of the item cannot be negative!");
-        }
-        else if ( Double.parseDouble(quantity.getText()) < 0 )
-        {
-            addItemMessageLabel.setText("Quantity cannot be negative!");
-        }
-        else
-        {
+
+
+
+            System.out.println("arda");
+            Item newItem = new Item(name.getText(), UserContainer.getMarketUsersList().get(UserContainer.currentMarket).getMarketName(), dateOfEx.getValue(),
+                    category.getValue(), brandName.getText(), Double.parseDouble( price.getText()), quantityBox.getValue(), Double.parseDouble(quantity.getText()) );
+            ItemContainer.addItemsList(newItem);
             addItemMessageLabel.setText("Item added successfully!");
-        }
+            System.out.println(ItemContainer.getItemsList().get(0));
+
+
 
     }
 
@@ -106,6 +91,7 @@ public class AddItemController implements Initializable
     {
         quantityBox.getItems().addAll(quantities);
         category.getItems().addAll(categories);
+        ItemContainer c = new ItemContainer();
 
 
 

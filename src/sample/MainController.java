@@ -21,6 +21,7 @@ public class MainController
 {
     @FXML
     private Button logOutButton;
+
     @FXML
     private Button addItemButton;
     @FXML
@@ -47,10 +48,7 @@ public class MainController
             stage.setScene(loginViewScene);
             stage.show();
         }
-        else
-        {
 
-        }
 
     }
 
@@ -116,5 +114,7 @@ public class MainController
         stage.show();
 
     }
+
+
 
 }

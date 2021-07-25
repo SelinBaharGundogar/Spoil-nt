@@ -16,6 +16,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -70,9 +72,12 @@ public class LoginController implements Initializable
         }
         else
         {
+            loginMessageLabel.setStyle("-fx-text-fill: green; -fx-font-size: 10px;");
             loginMessageLabel.setText("Please enter username or id and password");
             loginMessageLabel.setAlignment(Pos.CENTER);
+
         }
+        System.out.println(UserContainer.currentUser.getUserName());
     }
 
     /**
@@ -85,32 +90,18 @@ public class LoginController implements Initializable
         logoImageView.setImage(logoImage);
     }
 
-    /*public void validateLogin()
+    public boolean validateLogin()
     {
-        DatabaseConnection databaseConnection = new DatabaseConnection();
-        Connection connection = databaseConnection.getConnection();
-        String verifyLogin = "";
-        //42.dk
-
-        try{
-
-            Statement statement = connection.createStatement();
-            ResultSet queryResult = statement.executeQuery(verifyLogin);
-
-            while (queryResult.next()){
-                if (queryResult.getInt(1) == 1){
-                    //loginMessageLabel.setText("Congratulations!");
-                    createAccountForm();
-                }else{
-                    loginMessageLabel.setText("Invalid Login! Please try again.");
-                }
+        return true;
+        /*for (CustomerUser i: UserContainer.customerUsersList) {
+            if(userNameTextField.getText().equals(i.getUsername()) || Integer.parseInt(idTextField.getText()) == i.getID())
+            {
+                if(i.getPassword().equals(passwordTextField.getText()))
+                    return true;
             }
-
-        }catch (Exception e){
-            e.getCause();
-            e.printStackTrace();
         }
-    }*/
+        return false;*/
+    }
 
     /**
      * This method adds action to the registration button, which enables user to go to the registration page
@@ -134,29 +125,20 @@ public class LoginController implements Initializable
      */
    public void logIn(ActionEvent event) throws IOException
    {
-       Parent registrationView = FXMLLoader.load(getClass().getResource("main.fxml"));
-       Scene registrationViewScene = new Scene(registrationView);
+       if(validateLogin()) {
+           Parent registrationView = FXMLLoader.load(getClass().getResource("main.fxml"));
+           Scene registrationViewScene = new Scene(registrationView);
 
-       Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-       stage.setScene(registrationViewScene);
-       stage.show();
+           Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+           stage.setScene(registrationViewScene);
+           stage.show();
+       }
+       else
+           loginMessageLabel.setAlignment(Pos.CENTER);
+       loginMessageLabel.setStyle("-fx-text-fill: red; -fx-font-size: 16px;");
+       loginMessageLabel.setText("Wrong user name or password!!!");
+
    }
 
-    /**
-     * This method creates an account form for the user
-     */
-    public void createAccountForm()
-    {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("register.fxml"));
-            Stage registerStage = new Stage();
-            registerStage.initStyle(StageStyle.UNDECORATED);
-            registerStage.setScene(new Scene(root, 600, 467));
-            registerStage.show();
 
-        }catch (Exception e){
-            e.printStackTrace();
-            e.getCause();
-        }
-    }
 }
