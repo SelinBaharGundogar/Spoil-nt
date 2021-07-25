@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="629.0" style="-fx-background-color: #fffbe7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InformationController">
+   <left>
+      <AnchorPane prefHeight="454.0" prefWidth="224.0" style="-fx-background-color: #fffbe7;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="50.0" layoutY="24.0" mnemonicParsing="false" onAction="#goToAboutUsOnAction" prefHeight="54.0" prefWidth="121.0" style="-fx-background-color: #66cc00;" text="About Us" />
+            <Button layoutX="51.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToFoodWasteOnAction" prefHeight="54.0" prefWidth="121.0" style="-fx-background-color: #66cc00;" text="Food Waste" />
+            <Button layoutX="51.0" layoutY="182.0" mnemonicParsing="false" onAction="#goToClimateChangeOnAction" prefHeight="54.0" prefWidth="121.0" style="-fx-background-color: #66cc00;" text="Climate Change" />
+            <Button layoutX="51.0" layoutY="266.0" mnemonicParsing="false" onAction="#goToPovertyOnAction" prefHeight="54.0" prefWidth="121.0" style="-fx-background-color: #66cc00;" text="Poverty" />
+            <Button layoutX="50.0" layoutY="344.0" mnemonicParsing="false" onAction="#goToTipsOnAction" prefHeight="54.0" prefWidth="121.0" style="-fx-background-color: #66cc00;" text="Tips" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="454.0" prefWidth="441.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="28.0" layoutY="14.0" prefHeight="54.0" prefWidth="195.0" text="Information">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="126.0" layoutY="74.0" startX="-100.0" />
+            <Button layoutX="266.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnToMainOnAction" style="-fx-background-color: #66cc00;" text="Return to Main Page" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
