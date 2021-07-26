@@ -1,3 +1,0 @@
-# Spoil-nt
-The desktop application Spoil’nt aims to decrease food waste by creating a platform for markets to offer items with close expiration dates to their customers for free. The application will work as a system to limit ‘purchases’ per day for each user to prevent any misuse of obtaining a surplus of items. The application will accomplish this by assigning an ID to each one of its customer users. Each customer will only be able to add a certain quantity of food offered on the application per day to their online baskets.
-The customers will be able to obtain these items by going to the market in person and having their IDs checked by the market through the application.
