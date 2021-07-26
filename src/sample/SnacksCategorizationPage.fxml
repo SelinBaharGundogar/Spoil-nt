@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SnacksController">
+    <left>
+        <AnchorPane prefHeight="538.0" prefWidth="760.0" style="-fx-background-color: #fffbe7;" BorderPane.alignment="CENTER">
+            <children>
+                <ToolBar layoutY="27.0" prefHeight="23.0" prefWidth="786.0" style="-fx-background-color: #66cc00;">
+                    <items>
+                        <Button mnemonicParsing="false" style="-fx-background-color: #66cc00;" text="Spoil'nt" />
+                        <Button mnemonicParsing="false" onAction="#profileButtonOnAction" style="-fx-background-color: #66cc00;" text="Profile" />
+                        <Button mnemonicParsing="false" onAction="#logOutButtonOnAction" style="-fx-background-color: #66cc00;" text="Logout" />
+                        <Button mnemonicParsing="false" onAction="#goToInformationOnAction" style="-fx-background-color: #66cc00;" text="Information" />
+                        <Button mnemonicParsing="false" onAction="#returnToMainOnAction" style="-fx-background-color: #66cc00;" text="Return to Main Page" />
+                    </items>
+                </ToolBar>
+                <TableView layoutY="203.0" prefHeight="335.0" prefWidth="200.0" style="-fx-background-color: #fffbe7;">
+                    <columns>
+                        <TableColumn prefWidth="199.19999998807907" style="-fx-background-color: #66cc00;" text="Subcatogories" />
+                    </columns>
+                </TableView>
+                <Label layoutX="14.0" layoutY="68.0" prefHeight="22.0" prefWidth="59.0" text="Category: " textFill="#66cc00">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="categoryName" layoutX="75.0" layoutY="71.0" prefHeight="18.0" prefWidth="84.0" text="Snacks" />
+                <AnchorPane layoutX="198.0" layoutY="68.0" prefHeight="424.0" prefWidth="255.0">
+                    <children>
+                        <TableView fx:id="view" prefHeight="467.0" prefWidth="354.0" style="-fx-background-color: #fffbe7;">
+                            <columns>
+                                <TableColumn fx:id="nameC" prefWidth="65.20001220703125" style="-fx-background-color: #66cc00;" text="Name" />
+                                <TableColumn fx:id="marketC" minWidth="0.0" prefWidth="56.0" style="-fx-background-color: #66cc00;" text="Market" />
+                                <TableColumn fx:id="expireDateC" prefWidth="89.39996337890625" style="-fx-background-color: #66cc00;" text="Expire Date" />
+                                <TableColumn fx:id="priceC" minWidth="0.0" prefWidth="61.0" style="-fx-background-color: #66cc00;" text="Price" />
+                                <TableColumn fx:id="priceC1" minWidth="0.0" prefWidth="79.79998779296875" style="-fx-background-color: #66cc00;" text="Evaluation" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+                <ImageView fitHeight="102.0" fitWidth="148.0" layoutX="26.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/snacks.png" />
+                    </image></ImageView>
+                <ScrollBar layoutX="552.0" layoutY="68.0" orientation="VERTICAL" prefHeight="469.0" prefWidth="14.0" style="-fx-background-color: #66cc00;" />
+                <TableView layoutX="572.0" layoutY="66.0" prefHeight="155.0" prefWidth="200.0" style="-fx-background-color: #fffbe7;">
+                    <columns>
+                        <TableColumn prefWidth="199.199951171875" style="-fx-background-color: #66cc00;" text=" Most Discounted" />
+                    </columns>
+                </TableView>
+                <TableView layoutX="572.0" layoutY="334.0" prefHeight="202.0" prefWidth="200.0" style="-fx-background-color: #fffbe7;">
+                    <columns>
+                        <TableColumn prefWidth="199.199951171875" style="-fx-background-color: #66cc00;" text="Basket" />
+                    </columns>
+                </TableView>
+                <ScrollBar layoutX="765.0" layoutY="67.0" orientation="VERTICAL" prefHeight="153.0" prefWidth="14.0" style="-fx-background-color: #66cc00;" />
+                <ScrollBar layoutX="765.0" layoutY="335.0" orientation="VERTICAL" prefHeight="202.0" prefWidth="14.0" style="-fx-background-color: #66cc00;" />
+                <ImageView fitHeight="110.0" fitWidth="149.0" layoutX="617.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/basket.png" />
+                    </image></ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+</BorderPane>

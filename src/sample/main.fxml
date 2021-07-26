@@ -39,7 +39,7 @@
    <center>
       <AnchorPane prefHeight="424.0" prefWidth="312.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField layoutX="60.0" layoutY="14.0" promptText="search..." />
+            <TextField layoutX="59.0" layoutY="14.0" promptText="search..." />
             <AnchorPane layoutX="284.0" prefHeight="473.0" prefWidth="239.0">
                <children>
                   <TableView layoutX="20.0" layoutY="14.0" prefHeight="161.0" prefWidth="200.0" style="-fx-background-color: #fffbe7;">
@@ -49,7 +49,7 @@
                   </TableView>
                   <ImageView fitHeight="87.0" fitWidth="92.0" layoutX="76.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                         <Image url="@../Images/basket.png" />
+                         <Image url="@../../Images/basket.png" />
 
                      </image>
                   </ImageView>
@@ -61,11 +61,12 @@
                   </TableView>
                </children>
             </AnchorPane>
-            <Label layoutX="47.0" layoutY="91.0" prefHeight="18.0" prefWidth="206.0" text="                 Categorization" />
-            <Button fx:id="Dairy" layoutX="5.0" layoutY="145.0" mnemonicParsing="false" onAction="#DairyButtonOnAction" prefHeight="78.0" prefWidth="296.0" text="Dairy Products" />
-            <Button fx:id="Bakery" layoutX="5.0" layoutY="301.0" mnemonicParsing="false" onAction="#BakeryButtonOnAction" prefHeight="78.0" prefWidth="296.0" text="Snacks" />
-            <Button fx:id="Snacks" layoutX="5.0" layoutY="223.0" mnemonicParsing="false" onAction="#SnacksButtonOnAction" prefHeight="78.0" prefWidth="296.0" text="Bakery Products" />
-            <Button fx:id="Fruits" layoutX="5.0" layoutY="379.0" mnemonicParsing="false" onAction="#FruitsButtonOnAction" prefHeight="78.0" prefWidth="296.0" text="Button" />
+            <Label layoutX="48.0" layoutY="91.0" prefHeight="18.0" prefWidth="171.0" text="                 Categories" />
+            <Button fx:id="Dairy" layoutX="5.0" layoutY="145.0" mnemonicParsing="false" onAction="#DairyButtonOnAction" prefHeight="78.0" prefWidth="296.0" style="-fx-background-color: #66cc00;" text="Dairy Products" />
+            <Button fx:id="Bakery" layoutX="5.0" layoutY="301.0" mnemonicParsing="false" onAction="#SnacksButtonOnAction" prefHeight="78.0" prefWidth="296.0" style="-fx-background-color: #66cc00;" text="Snacks" />
+            <Button fx:id="Snacks" layoutX="5.0" layoutY="223.0" mnemonicParsing="false" onAction="#MeatProductsButtonOnAction" prefHeight="78.0" prefWidth="296.0" style="-fx-background-color: #66cc00;" text="Meat Products" />
+            <Button fx:id="Fruits" layoutX="5.0" layoutY="379.0" mnemonicParsing="false" onAction="#FruitsButtonOnAction" prefHeight="78.0" prefWidth="296.0" style="-fx-background-color: #66cc00;" text="Fruits &amp; Vegetables" />
+            <Button layoutX="219.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="44.0" style="-fx-background-color: #66cc00;" text="Enter" />
          </children>
       </AnchorPane>
    </center>

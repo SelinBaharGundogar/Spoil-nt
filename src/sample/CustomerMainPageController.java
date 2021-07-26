@@ -10,14 +10,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -137,7 +134,7 @@ public class CustomerMainPageController implements Initializable
         //dairyList.add(new Item("fhg",null,  "Dairy", "lklk", 12, "k", 12, cList  ));
         list = dairyList;
 
-        Parent profileView = FXMLLoader.load(getClass().getResource("categorization.fxml"));
+        Parent profileView = FXMLLoader.load(getClass().getResource("DairyProductsCategorization.fxml"));
         Scene profileViewScene= new Scene(profileView);
 
         /*for (Item i: ItemContainer.getItemsList()) {
@@ -153,10 +150,10 @@ public class CustomerMainPageController implements Initializable
         stage.show();
     }
 
-    public void BakeryButtonOnAction(ActionEvent event) throws IOException
+    public void MeatProductsButtonOnAction(ActionEvent event) throws IOException
     {
         //CategorizationController.categoryName.setText("Dairy Products");
-        Parent profileView = FXMLLoader.load(getClass().getResource("categorization.fxml"));
+        Parent profileView = FXMLLoader.load(getClass().getResource("MeatProductsCategorizationPage.fxml"));
         Scene profileViewScene= new Scene(profileView);
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -167,7 +164,7 @@ public class CustomerMainPageController implements Initializable
 
     public void SnacksButtonOnAction(ActionEvent event) throws IOException
     {
-        Parent profileView = FXMLLoader.load(getClass().getResource("categorization.fxml"));
+        Parent profileView = FXMLLoader.load(getClass().getResource("SnacksCategorizationPage.fxml"));
         Scene profileViewScene= new Scene(profileView);
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -178,7 +175,7 @@ public class CustomerMainPageController implements Initializable
 
     public void FruitsButtonOnAction(ActionEvent event) throws IOException
     {
-        Parent profileView = FXMLLoader.load(getClass().getResource("categorization.fxml"));
+        Parent profileView = FXMLLoader.load(getClass().getResource("FruitsVegetables.fxml"));
         Scene profileViewScene= new Scene(profileView);
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

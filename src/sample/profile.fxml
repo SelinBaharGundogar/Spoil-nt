@@ -26,59 +26,20 @@
             <Label layoutX="393.0" layoutY="108.0" text="Number:" />
             <Label layoutX="394.0" layoutY="147.0" text="Address:" />
             <Button fx:id="returnToMain" layoutX="470.0" layoutY="1.0" mnemonicParsing="false" onAction="#returnToMainOnAction" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #66cc00;" text="Return to Main Page" />
-            <Button fx:id="nameEdit" layoutX="329.0" layoutY="69.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="35.0">
-               <graphic>
-                  <ImageView fitHeight="16.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Images/edit.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button layoutX="329.0" layoutY="104.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="31.0">
-               <graphic>
-                  <ImageView fx:id="surnameEdit" fitHeight="18.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Images/edit.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button layoutX="329.0" layoutY="142.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="34.0">
-               <graphic>
-                  <ImageView fitHeight="17.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Images/edit.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button layoutX="568.0" layoutY="69.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="30.0">
-               <graphic>
-                  <ImageView fx:id="emailEdit" fitHeight="21.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Images/edit.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button layoutX="570.0" layoutY="103.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0">
-               <graphic>
-                  <ImageView fitHeight="16.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Images/edit.png" />
-                     </image></ImageView>
-               </graphic></Button>
-            <Button fx:id="addressEdit" layoutX="570.0" layoutY="143.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
-               <graphic>
-                  <ImageView fx:id="addressEdit" fitHeight="15.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Images/edit.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
+            <Button fx:id="nameEdit" layoutX="329.0" layoutY="69.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="35.0" />
             <TextField fx:id="name" layoutX="219.0" layoutY="73.0" prefHeight="26.0" prefWidth="105.0" style="-fx-background-color: #fffbe7;" />
             <TextField fx:id="surname" layoutX="233.0" layoutY="105.0" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: #fffbe7;" />
             <TextField fx:id="userName" layoutX="233.0" layoutY="143.0" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: #fffbe7;" />
             <TextField fx:id="email" layoutX="433.0" layoutY="70.0" prefHeight="26.0" prefWidth="123.0" style="-fx-background-color: #fffbe7;" />
             <TextField fx:id="number" layoutX="448.0" layoutY="103.0" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: #fffbe7;" />
             <TextField fx:id="address" layoutX="448.0" layoutY="142.0" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #fffbe7;" />
+            <Button fx:id="nameEdit1" layoutX="329.0" layoutY="101.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="35.0" />
+            <Button fx:id="nameEdit11" layoutX="329.0" layoutY="133.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="35.0" />
+            <Button fx:id="nameEdit111" layoutX="568.0" layoutY="69.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="35.0" />
+            <Button fx:id="nameEdit1111" layoutX="568.0" layoutY="101.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="35.0" />
+            <Button fx:id="nameEdit11111" layoutX="568.0" layoutY="133.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="35.0" />
+            <Label layoutX="14.0" layoutY="181.0" text="Username:" />
+            <Label layoutX="84.0" layoutY="181.0" prefHeight="18.0" prefWidth="76.0" />
          </children>
       </AnchorPane>
    </top>
