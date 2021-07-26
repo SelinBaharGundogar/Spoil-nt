@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fffbe7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminCustomerSearchController">
+   <children>
+      <Button fx:id="searchButton" layoutX="332.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #66cc00;" text="Search" />
+      <TextField layoutX="160.0" layoutY="30.0" />
+      <Label layoutX="73.0" layoutY="34.0" text="User Name" />
+      <Button layoutX="234.0" layoutY="344.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="132.0" style="-fx-background-color: #66cc00;" text="Ban User" />
+      <TableView fx:id="banButton" layoutX="80.0" layoutY="100.0" prefHeight="200.0" prefWidth="468.0">
+        <columns>
+          <TableColumn prefWidth="228.6000213623047" text="Name of Item" />
+          <TableColumn minWidth="0.0" prefWidth="238.5999755859375" text="Quantity" />
+        </columns>
+      </TableView>
+      <Button layoutX="460.0" layoutY="30.0" mnemonicParsing="false" onAction="#returnToMainPage" style="-fx-background-color: #66cc00;" text="Return Main Page" />
+   </children>
+</AnchorPane>
