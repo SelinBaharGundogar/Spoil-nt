@@ -10,7 +10,9 @@ public class UserContainer {
 
     // Properties
     static CustomerUser currentUser;
-    static int currentMarket;
+    static MarketUser currentMarket;
+    static MarketUser activeMarketUser;
+    static CustomerUser activeCustomerUser;
 
     static ArrayList<MarketUser> marketUsersList;
     static ArrayList<CustomerUser> customerUsersList;
@@ -22,10 +24,13 @@ public class UserContainer {
      * @param
      */
     public UserContainer(){
-        currentMarket = 0;
+        currentMarket = new MarketUser("", "", 0, "", "");
         customerUsersList = new ArrayList<>();
         marketUsersList = new ArrayList<>();
         currentUser = new CustomerUser("","",12,"","");
+
+        activeCustomerUser = new CustomerUser("","",12,"","");
+        activeMarketUser = new MarketUser("", "", 0, "", "");
     }
 
 

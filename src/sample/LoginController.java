@@ -92,15 +92,16 @@ public class LoginController implements Initializable
 
     public boolean validateLogin()
     {
-        return true;
-        /*for (CustomerUser i: UserContainer.customerUsersList) {
+        for (CustomerUser i: UserContainer.customerUsersList)
+        {
             if(userNameTextField.getText().equals(i.getUsername()) || Integer.parseInt(idTextField.getText()) == i.getID())
             {
                 if(i.getPassword().equals(passwordTextField.getText()))
+                    UserContainer.activeCustomerUser = i;
                     return true;
             }
         }
-        return false;*/
+        return false;
     }
 
     /**
@@ -133,10 +134,14 @@ public class LoginController implements Initializable
            stage.setScene(registrationViewScene);
            stage.show();
        }
-       else
+       else {
            loginMessageLabel.setAlignment(Pos.CENTER);
-       loginMessageLabel.setStyle("-fx-text-fill: red; -fx-font-size: 16px;");
-       loginMessageLabel.setText("Wrong user name or password!!!");
+           loginMessageLabel.setStyle("-fx-text-fill: red; -fx-font-size: 16px;");
+           loginMessageLabel.setText("Wrong user name or password!!!");
+       }
+
+
+
 
    }
 

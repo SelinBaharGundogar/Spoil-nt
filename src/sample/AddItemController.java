@@ -58,7 +58,7 @@ public class AddItemController implements Initializable
 
 
             System.out.println("arda");
-            Item newItem = new Item(name.getText(), UserContainer.getMarketUsersList().get(UserContainer.currentMarket).getMarketName(), dateOfEx.getValue(),
+            Item newItem = new Item(name.getText(), UserContainer.getMarketUsersList().get(UserContainer.currentMarket.getID()).getMarketName(), dateOfEx.getValue(),
                     category.getValue(), brandName.getText(), Double.parseDouble( price.getText()), quantityBox.getValue(), Double.parseDouble(quantity.getText()) );
             ItemContainer.addItemsList(newItem);
             addItemMessageLabel.setText("Item added successfully!");

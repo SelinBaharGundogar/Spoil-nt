@@ -18,11 +18,6 @@
                         <Button mnemonicParsing="false" onAction="#returnToMainOnAction" style="-fx-background-color: #66cc00;" text="Return to Main Page" />
                     </items>
                 </ToolBar>
-                <TableView layoutY="203.0" prefHeight="335.0" prefWidth="200.0" style="-fx-background-color: #fffbe7;">
-                    <columns>
-                        <TableColumn prefWidth="199.19999998807907" style="-fx-background-color: #66cc00;" text="Subcatogories" />
-                    </columns>
-                </TableView>
                 <Label layoutX="14.0" layoutY="68.0" prefHeight="22.0" prefWidth="59.0" text="Category: " textFill="#66cc00">
                     <font>
                         <Font name="System Bold" size="12.0" />
@@ -63,6 +58,21 @@
                     <image>
                         <Image url="@../../Images/basket.png" />
                     </image></ImageView>
+            <Label layoutX="55.0" layoutY="221.0" text="Subcategories">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="10.0" layoutY="275.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="178.0" style="-fx-background-color: #66cc00;" text="Fruits">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="387.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="178.0" style="-fx-background-color: #66cc00;" text="Vegetables">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
             </children>
         </AnchorPane>
     </left>

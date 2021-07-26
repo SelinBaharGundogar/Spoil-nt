@@ -18,17 +18,15 @@
                         <Button mnemonicParsing="false" onAction="#returnToMainOnAction" style="-fx-background-color: #66cc00;" text="Return to Main Page" />
                     </items>
                 </ToolBar>
-                <TableView layoutY="203.0" prefHeight="335.0" prefWidth="200.0" style="-fx-background-color: #fffbe7;">
-                    <columns>
-                        <TableColumn prefWidth="199.19999998807907" style="-fx-background-color: #66cc00;" text="Subcatogories" />
-                    </columns>
-                </TableView>
-                <Label layoutX="14.0" layoutY="68.0" prefHeight="22.0" prefWidth="59.0" text="Category: " textFill="#66cc00">
+                <Label layoutX="14.0" layoutY="79.0" prefHeight="22.0" prefWidth="59.0" text="Category: " textFill="#66cc00">
                     <font>
                         <Font name="System Bold" size="12.0" />
                     </font>
                 </Label>
-                <Label fx:id="categoryName" layoutX="75.0" layoutY="71.0" prefHeight="18.0" prefWidth="84.0" text="Meat Products" />
+                <Label fx:id="categoryName" layoutX="73.0" layoutY="80.0" prefHeight="19.0" prefWidth="86.0" text="Meat Products">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
                 <AnchorPane layoutX="198.0" layoutY="68.0" prefHeight="424.0" prefWidth="255.0">
                     <children>
                         <TableView fx:id="view" prefHeight="467.0" prefWidth="354.0" style="-fx-background-color: #fffbe7;">
@@ -42,7 +40,7 @@
                         </TableView>
                     </children>
                 </AnchorPane>
-                <ImageView fitHeight="201.0" fitWidth="143.0" layoutX="29.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="182.0" fitWidth="169.0" layoutX="14.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../Images/poultry.png" />
                     </image></ImageView>
@@ -63,6 +61,10 @@
                     <image>
                         <Image url="@../Images/basket.png" />
                     </image></ImageView>
+            <Label layoutX="62.0" layoutY="234.0" prefHeight="34.0" prefWidth="81.0" text="Subcategories" />
+            <Button layoutX="17.0" layoutY="281.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="171.0" style="-fx-background-color: #66cc00;" text="Chicken" />
+            <Button layoutX="17.0" layoutY="364.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="171.0" style="-fx-background-color: #66cc00;" text="Red meat" />
+            <Button layoutX="17.0" layoutY="444.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="171.0" style="-fx-background-color: #66cc00;" text="Fish" />
             </children>
         </AnchorPane>
     </left>

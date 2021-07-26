@@ -83,6 +83,15 @@ public class MarketRegisterController implements Initializable
             registerUser(event);
         }
 
+        MarketUser user = new MarketUser(emailTextField.getText(), passwordTextField.getText(), 0, adressTextArea.getText(), userNameTextField.getText());
+        //System.out.println(user.toString());
+        UserContainer.marketUsersList.add(user);
+        //System.out.println(UserContainer.marketUsersList.get(0));
+        UserContainer.currentMarket = user;
+        System.out.println(UserContainer.currentMarket);
+        System.out.println(UserContainer.marketUsersList.get(0).getID());
+        System.out.println(UserContainer.marketUsersList.get(0).getUsername());
+
     }
 
     /**
