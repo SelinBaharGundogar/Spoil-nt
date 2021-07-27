@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -31,6 +32,8 @@ public class CustomerMainPageController implements Initializable
     // variables
     static ObservableList<Item> list= FXCollections.observableArrayList();
     static String categoryString;
+    @FXML
+    private TextField searchTextField;
     @FXML
     private Button Dairy;
     @FXML
@@ -152,23 +155,22 @@ public class CustomerMainPageController implements Initializable
 
     public void MeatProductsButtonOnAction(ActionEvent event) throws IOException
     {
-        //CategorizationController.categoryName.setText("Dairy Products");
-        Parent profileView = FXMLLoader.load(getClass().getResource("MeatProductsCategorizationPage.fxml"));
-        Scene profileViewScene= new Scene(profileView);
+        Parent meatView = FXMLLoader.load(getClass().getResource("MeatProductsCategorizationPage.fxml"));
+        Scene meatViewScene= new Scene(meatView);
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(profileViewScene);
+        stage.setScene(meatViewScene);
         stage.show();
 
     }
 
     public void SnacksButtonOnAction(ActionEvent event) throws IOException
     {
-        Parent profileView = FXMLLoader.load(getClass().getResource("SnacksCategorizationPage.fxml"));
-        Scene profileViewScene= new Scene(profileView);
+        Parent snacksView = FXMLLoader.load(getClass().getResource("SnacksCategorizationPage.fxml"));
+        Scene snacksViewScene= new Scene(snacksView);
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(profileViewScene);
+        stage.setScene(snacksViewScene);
         stage.show();
 
     }
@@ -183,4 +185,48 @@ public class CustomerMainPageController implements Initializable
         stage.show();
 
     }
+
+    public void search(ActionEvent event) throws IOException
+    {
+        String category = searchTextField.getText();
+        if (category.equals("Dairy Products"))
+        {
+            Parent dairyProductsView = FXMLLoader.load(getClass().getResource("DairyProductsCategorization.fxml"));
+            Scene dairyProductsViewScene= new Scene(dairyProductsView);
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(dairyProductsViewScene);
+            stage.show();
+        }
+        else if (category.equals("Meat Products"))
+        {
+            Parent meatView = FXMLLoader.load(getClass().getResource("MeatProductsCategorizationPage.fxml"));
+            Scene meatViewScene= new Scene(meatView);
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(meatViewScene);
+            stage.show();
+        }
+        else if (category.equals("Snacks"))
+        {
+            Parent snacksView = FXMLLoader.load(getClass().getResource("SnacksCategorizationPage.fxml"));
+            Scene snacksViewScene= new Scene(snacksView);
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(snacksViewScene);
+            stage.show();
+        }
+        else if (category.equals("Fruits & Vegetables"))
+        {
+            Parent fruitsVegetablesView = FXMLLoader.load(getClass().getResource("FruitsVegetables.fxml"));
+            Scene fruitsVegetablesViewScene= new Scene(fruitsVegetablesView);
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(fruitsVegetablesViewScene);
+            stage.show();
+        }
+
+    }
+
+
 }
