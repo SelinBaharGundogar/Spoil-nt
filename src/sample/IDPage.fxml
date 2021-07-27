@@ -12,12 +12,10 @@
                <children>
                   <ScrollPane prefHeight="315.0" prefWidth="632.0">
                      <content>
-                        <TableView prefHeight="324.0" prefWidth="608.0">
+                        <TableView fx:id="table" prefHeight="324.0" prefWidth="608.0">
                           <columns>
-                            <TableColumn prefWidth="190.0" style="-fx-background-color: #66cc00;" text="Product Name" />
-                            <TableColumn minWidth="3.0" prefWidth="144.0" style="-fx-background-color: #66cc00;" text="Quantity" />
-                              <TableColumn prefWidth="142.0" style="-fx-background-color: #66cc00;" text="Increment/Decrement" />
-                              <TableColumn prefWidth="110.0" style="-fx-background-color: #66cc00;" text="Remove" />
+                            <TableColumn fx:id="productname" prefWidth="294.0" style="-fx-background-color: #66cc00;" text="Product Name" />
+                            <TableColumn fx:id="quantity" minWidth="3.0" prefWidth="289.0" style="-fx-background-color: #66cc00;" text="Quantity" />
                           </columns>
                         </TableView>
                      </content></ScrollPane>
@@ -39,5 +37,7 @@
       </Label>
       <Button fx:id="sellButton" layoutX="266.0" layoutY="442.0" mnemonicParsing="false" onAction="#sellButtonOnAction" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: #66cc00;" text="Sell!" />
       <Label fx:id="idMessageLabel" alignment="CENTER" layoutX="219.0" layoutY="411.0" prefHeight="18.0" prefWidth="188.0" textFill="#0b00df" />
+      <Button fx:id="search" layoutX="228.0" layoutY="42.0" mnemonicParsing="false" onAction="#searchButtonOnAction" style="-fx-background-color: #66cc00;" text="Search" />
    </children>
 </AnchorPane>
+
