@@ -53,11 +53,14 @@ public class IDController implements Initializable
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //Bu sinifin tableview'ini implement etmemiz icin id search metodunun yazilmasi gerekiyor
         //ID control metodu gerekiyor
-        list.add(new CustomerUser("parsa@gmail.com", "22222222", 7, "pk", "Parsa"));
-        idTextField.getText();
-        productname.setCellValueFactory(new PropertyValueFactory<CustomerUser, String>("email"));
-        quantity.setCellValueFactory(new PropertyValueFactory<CustomerUser, Integer>("ID"));
+
+        /*/
+        list.add(UserContainer.customerUsersList.getIDMathcing User()?);
+        productname.setCellValueFactory(UserContainer.customerUsersList -> UserContainer.customerUsersList.getItems().getName());
+        quantity.setCellValueFactory(UserContainer.customerUsersList -> UserContainer.customerUsersList.getItem().getQuantity());
+        // expirationdate.setCellValueFactory(UserContainer.currentUser -> UserContainer.currentUser.getItem().getDate());
         table.setItems(list);
+        */
     }
 
 
