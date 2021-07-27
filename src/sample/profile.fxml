@@ -46,20 +46,20 @@
    <center>
       <AnchorPane prefHeight="323.0" prefWidth="599.0" style="-fx-background-color: #fffbe7;" BorderPane.alignment="CENTER">
          <children>
-            <TableView fx:id="tableView" layoutY="12.0" prefHeight="311.0" prefWidth="600.0" style="-fx-background-color: #fffbe7;">
+            <TableView fx:id="table" layoutY="12.0" prefHeight="311.0" prefWidth="600.0" style="-fx-background-color: #fffbe7;">
               <columns>
-                <TableColumn fx:id="columnNumber" prefWidth="34.00003206729889" style="-fx-background-color: #66cc00;" text="#" />
-                <TableColumn fx:id="dateColumn" prefWidth="72.80002212524414" style="-fx-background-color: #66cc00;" text="Date" />
-                  <TableColumn fx:id="categoryColumn" prefWidth="93.60000610351562" style="-fx-background-color: #66cc00;" text="Category" />
-                  <TableColumn fx:id="nameColumn" prefWidth="70.20001220703125" style="-fx-background-color: #66cc00;" text="Name" />
-                  <TableColumn fx:id="marketColumn" prefWidth="86.0" style="-fx-background-color: #66cc00;" text="Market" />
-                  <TableColumn prefWidth="69.60003662109375" style="-fx-background-color: #66cc00;" text="Price" />
-                  <TableColumn prefWidth="63.5999755859375" style="-fx-background-color: #66cc00;" text="Number" />
-                  <TableColumn fx:id="evaluationColumn" prefWidth="73.40005493164062" style="-fx-background-color: #66cc00;" text="Evaluation" />
+                <TableColumn fx:id="no" prefWidth="34.00003206729889" style="-fx-background-color: #66cc00;" text="#" />
+                <TableColumn fx:id="date" prefWidth="72.80002212524414" style="-fx-background-color: #66cc00;" text="Date" />
+                  <TableColumn fx:id="category" prefWidth="93.60000610351562" style="-fx-background-color: #66cc00;" text="Category" />
+                  <TableColumn fx:id="name" prefWidth="70.20001220703125" style="-fx-background-color: #66cc00;" text="Name" />
+                  <TableColumn fx:id="market" prefWidth="86.0" style="-fx-background-color: #66cc00;" text="Market" />
+                  <TableColumn fx:id="price" prefWidth="69.60003662109375" style="-fx-background-color: #66cc00;" text="Price" />
+                  <TableColumn fx:id="number" prefWidth="63.5999755859375" style="-fx-background-color: #66cc00;" text="Number" />
+                  <TableColumn fx:id="evaluation" prefWidth="73.40005493164062" style="-fx-background-color: #66cc00;" text="Evaluation" />
               </columns>
             </TableView>
             <ScrollBar layoutX="599.0" layoutY="13.0" orientation="VERTICAL" prefHeight="309.0" prefWidth="14.0" style="-fx-background-color: #66cc00;" />
-            <Button layoutX="567.0" layoutY="12.0" mnemonicParsing="false" onAction="#goToCommentOnAction" prefHeight="26.0" prefWidth="35.0" style="-fx-background-color: #66cc00;" text="+" />
+            <Button fx:id="addcomment" layoutX="567.0" layoutY="12.0" mnemonicParsing="false" onAction="#goToCommentOnAction" prefHeight="26.0" prefWidth="35.0" style="-fx-background-color: #66cc00;" text="+" />
          </children></AnchorPane>
    </center>
 </BorderPane>
