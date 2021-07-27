@@ -22,6 +22,8 @@ public class Item implements  TheItem{
     private String measure;
     private double amount;
     private boolean selected;
+    static int itemID;
+    int nextID = 0;
     private ArrayList<Comment> itemComment;
     private int status;//1 -> current, 0 -> reserved, -1 -> past
     private boolean sold;//true -> sold, false -> removed
@@ -43,6 +45,8 @@ public class Item implements  TheItem{
         this.measure = measure;
         this.amount = amount;
 
+        this.itemID = nextID;
+        nextID++;
         selected = false;
         sold = true;
         status = 1;
@@ -61,6 +65,12 @@ public class Item implements  TheItem{
         return market;
     }
 
+    
+    public static int getID(){
+        return itemID;
+    }
+    
+    
     public void setMarket(String market) {
         this.market = market;
     }
