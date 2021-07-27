@@ -17,13 +17,11 @@
                   </ImageView>
                   <Label layoutX="22.0" layoutY="131.0" prefHeight="17.0" prefWidth="84.0" text="Market Name:" />
                   <TextField fx:id="nameOfMarket" layoutX="22.0" layoutY="162.0" prefHeight="27.0" prefWidth="191.0" promptText="Market Name" />
-                  <ChoiceBox fx:id="districtBox" layoutX="17.0" layoutY="294.0" prefWidth="150.0" />
-                  <Label layoutX="22.0" layoutY="267.0" prefHeight="17.0" prefWidth="70.0" text="District:" />
-                  <Label layoutX="22.0" layoutY="199.0" prefHeight="17.0" prefWidth="70.0" text="City:" />
-                  <ChoiceBox fx:id="cityBox" layoutX="17.0" layoutY="232.0" prefWidth="150.0" />
                   <Button layoutX="125.0" layoutY="51.0" mnemonicParsing="false" onAction="#ImagePicker" style="-fx-background-color: #66cc00;" text="Change Profile Picture" />
                   <Button alignment="CENTER" layoutX="69.0" layoutY="356.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="27.0" prefWidth="150.0" style="-fx-background-color: #66cc00;" text="Update" />
-                  <Label fx:id="updateMessageLabel" layoutX="74.0" layoutY="332.0" prefHeight="18.0" prefWidth="150.0" textFill="#001aff" />
+                  <Label fx:id="updateMessageLabel" layoutX="69.0" layoutY="324.0" prefHeight="18.0" prefWidth="150.0" textFill="#001aff" />
+                  <TextArea fx:id="addressTextArea" layoutX="22.0" layoutY="217.0" prefHeight="100.0" prefWidth="191.0" />
+                  <Label layoutX="22.0" layoutY="199.0" prefHeight="17.0" prefWidth="84.0" text="Address" />
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="0.0" style="-fx-background-color: #fffbe7;">
                <children>
@@ -41,3 +39,4 @@
       </SplitPane>
    </children>
 </AnchorPane>
+
