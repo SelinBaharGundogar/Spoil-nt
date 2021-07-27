@@ -1,3 +1,4 @@
+package sample;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,6 +13,9 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import sample.MarketUser;
+import sample.User;
+
 import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
@@ -135,6 +139,11 @@ public class CommentController implements Initializable
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(informationViewScene);
         stage.show();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
 }
 

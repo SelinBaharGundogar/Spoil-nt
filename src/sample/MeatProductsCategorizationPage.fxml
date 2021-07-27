@@ -62,9 +62,9 @@
                         <Image url="@../Images/basket.png" />
                     </image></ImageView>
             <Label layoutX="62.0" layoutY="234.0" prefHeight="34.0" prefWidth="81.0" text="Subcategories" />
-            <Button layoutX="17.0" layoutY="281.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="171.0" style="-fx-background-color: #66cc00;" text="Chicken" />
-            <Button layoutX="17.0" layoutY="364.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="171.0" style="-fx-background-color: #66cc00;" text="Red meat" />
-            <Button layoutX="17.0" layoutY="444.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="171.0" style="-fx-background-color: #66cc00;" text="Fish" />
+            <Button layoutX="17.0" layoutY="266.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="171.0" style="-fx-background-color: #66cc00;" text="Chicken" />
+            <Button layoutX="17.0" layoutY="350.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="171.0" style="-fx-background-color: #66cc00;" text="Red meat" />
+            <Button layoutX="17.0" layoutY="435.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="171.0" style="-fx-background-color: #66cc00;" text="Fish" />
             </children>
         </AnchorPane>
     </left>

@@ -3,6 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="725.0" style="-fx-background-color: #fffbe7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CustomerMainPageController">
    <top>
@@ -61,12 +62,14 @@
                   </TableView>
                </children>
             </AnchorPane>
-            <Label layoutX="48.0" layoutY="91.0" prefHeight="18.0" prefWidth="171.0" text="                 Categories" />
-            <Button fx:id="Dairy" layoutX="5.0" layoutY="145.0" mnemonicParsing="false" onAction="#DairyButtonOnAction" prefHeight="78.0" prefWidth="296.0" style="-fx-background-color: #66cc00;" text="Dairy Products" />
-            <Button fx:id="Bakery" layoutX="5.0" layoutY="301.0" mnemonicParsing="false" onAction="#SnacksButtonOnAction" prefHeight="78.0" prefWidth="296.0" style="-fx-background-color: #66cc00;" text="Snacks" />
-            <Button fx:id="Snacks" layoutX="5.0" layoutY="223.0" mnemonicParsing="false" onAction="#MeatProductsButtonOnAction" prefHeight="78.0" prefWidth="296.0" style="-fx-background-color: #66cc00;" text="Meat Products" />
-            <Button fx:id="Fruits" layoutX="5.0" layoutY="379.0" mnemonicParsing="false" onAction="#FruitsButtonOnAction" prefHeight="78.0" prefWidth="296.0" style="-fx-background-color: #66cc00;" text="Fruits &amp; Vegetables" />
-            <Button layoutX="219.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="44.0" style="-fx-background-color: #66cc00;" text="Enter" />
+            <Label layoutX="20.0" layoutY="71.0" prefHeight="27.0" prefWidth="242.0" text="                 Categories">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Button fx:id="Dairy" layoutX="5.0" layoutY="106.0" mnemonicParsing="false" onAction="#DairyButtonOnAction" prefHeight="78.0" prefWidth="296.0" style="-fx-background-color: #66cc00;" text="Dairy Products" />
+            <Button fx:id="Bakery" layoutX="5.0" layoutY="292.0" mnemonicParsing="false" onAction="#SnacksButtonOnAction" prefHeight="78.0" prefWidth="296.0" style="-fx-background-color: #66cc00;" text="Snacks" />
+            <Button fx:id="Snacks" layoutX="5.0" layoutY="198.0" mnemonicParsing="false" onAction="#MeatProductsButtonOnAction" prefHeight="78.0" prefWidth="296.0" style="-fx-background-color: #66cc00;" text="Meat Products" />
+            <Button fx:id="Fruits" layoutX="5.0" layoutY="382.0" mnemonicParsing="false" onAction="#FruitsButtonOnAction" prefHeight="78.0" prefWidth="296.0" style="-fx-background-color: #66cc00;" text="Fruits &amp; Vegetables" />
          </children>
       </AnchorPane>
    </center>

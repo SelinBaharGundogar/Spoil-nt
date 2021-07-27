@@ -13,6 +13,10 @@ public class CustomerUser extends User {
     //Properties
     ArrayList<Item> currentItems;
     String userName;
+    String address;
+    String name;
+    String Surname;
+    String number;
     private  Basket basketOfTheUser;
     private Button addCommentButton;
 
@@ -34,7 +38,7 @@ public class CustomerUser extends User {
     }
     
     public Button getAddCommentButton(){
-        return addCommentButton
+        return addCommentButton;
     }
     public void setaddCommentButton( Button addCommentButton){
         this.addCommentButton = addCommentButton;
@@ -68,7 +72,29 @@ public class CustomerUser extends User {
         return userName;
     }
 
+    public void setCurrentItems(ArrayList<Item> currentItems) {
+        this.currentItems = currentItems;
+    }
 
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        Surname = surname;
+    }
+
+    public void setAddCommentButton(Button addCommentButton) {
+        this.addCommentButton = addCommentButton;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
 
     @Override
     public String toString() {

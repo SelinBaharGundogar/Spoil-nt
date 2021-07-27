@@ -78,10 +78,10 @@ public class ProfileController implements Initializable
      */
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-       
         File profileFile = new File("Images/market-logo.jpg");
         Image profileImage = new Image(profileFile.toURI().toString());
-        //profileImageView.setImage(profileImage);
+        profileImageView.setImage(profileImage);
+
         profileImageView.setImage(UserContainer.activeMarketUser.getMarketImage());
         name.setText(UserContainer.activeMarketUser.getMarketName());
 
@@ -99,8 +99,8 @@ public class ProfileController implements Initializable
 */
 
 
-        ID.setCellValueFactory(new PropertyValueFactory<CustomerUser, Integer>("ID"));
-        password.setCellValueFactory(new PropertyValueFactory<CustomerUser, String>("password"));
+        //ID.setCellValueFactory(new PropertyValueFactory<CustomerUser, Integer>("ID"));
+        //password.setCellValueFactory(new PropertyValueFactory<CustomerUser, String>("password"));
         table.setItems(list);
 
     }

@@ -109,4 +109,49 @@ public class CustomerProfileController implements Initializable
         stage.setScene(commentViewScene);
         stage.show();
     }
+
+
+    public void editName(ActionEvent event) throws IOException
+    {
+        String editedName = name.getText();
+        UserContainer.activeCustomerUser.setName(editedName);
+        name.setText(editedName);
+    }
+
+    public void editSurname(ActionEvent event) throws IOException
+    {
+        String editedSurname = surname.getText();
+        UserContainer.activeCustomerUser.setSurname(editedSurname);
+        surname.setText(editedSurname);
+    }
+
+    public void editUserName(ActionEvent event) throws IOException
+    {
+        String editedUserName = userName.getText();
+        UserContainer.activeCustomerUser.setUserName(editedUserName);
+        userName.setText(editedUserName);
+    }
+
+    public void editEmail(ActionEvent event) throws IOException
+    {
+        String editedEmail = email.getText();
+        UserContainer.activeCustomerUser.setEmail(editedEmail);
+        email.setText(editedEmail);
+    }
+
+    public void editNumber(ActionEvent event) throws IOException
+    {
+        String editedNumber = number.getText();
+        UserContainer.activeCustomerUser.setNumber(editedNumber);
+        number.setText(editedNumber);
+    }
+
+    public void editAddress(ActionEvent event) throws IOException
+    {
+        String editedAddress = address.getText();
+        UserContainer.activeCustomerUser.setAddress(editedAddress);
+        address.setText(editedAddress);
+    }
+
+
 }
