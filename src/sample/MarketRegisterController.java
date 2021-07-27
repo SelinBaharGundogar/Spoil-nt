@@ -36,10 +36,7 @@ public class MarketRegisterController implements Initializable
 
     @FXML
     private TextField nameTextField;
-    @FXML
-    private TextField surNameTextField;
-    @FXML
-    private TextField userNameTextField;
+
     @FXML
     private TextField emailTextField;
     @FXML
@@ -55,15 +52,17 @@ public class MarketRegisterController implements Initializable
     @FXML
     private Label passwordWarningLabel;
 
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
         File registerFile = new File("Images/register.jpeg");
         Image registerImage = new Image(registerFile.toURI().toString());
         registerView.setImage(registerImage);
+        UserContainer container = new UserContainer();
     }
 
     public void registerButtonOnAction(ActionEvent event)
     {
-        if (nameTextField.getText().isBlank() || surNameTextField.getText().isBlank() || userNameTextField.getText().isBlank() || emailTextField.getText().isBlank() || adressTextArea.getText().isBlank() || passwordTextField.getText().isBlank() || confirmPasswordTextField.getText().isBlank())
+        if (nameTextField.getText().isBlank() ||  emailTextField.getText().isBlank() || adressTextArea.getText().isBlank() || passwordTextField.getText().isBlank() || confirmPasswordTextField.getText().isBlank())
         {
             registerMessageLabel.setText("Please fill all the areas!");
         }
@@ -83,15 +82,6 @@ public class MarketRegisterController implements Initializable
             registerUser(event);
         }
 
-        MarketUser user = new MarketUser(emailTextField.getText(), passwordTextField.getText(), 0, adressTextArea.getText(), userNameTextField.getText());
-        //System.out.println(user.toString());
-        UserContainer.marketUsersList.add(user);
-        //System.out.println(UserContainer.marketUsersList.get(0));
-        UserContainer.currentMarket = user;
-        System.out.println(UserContainer.currentMarket);
-        System.out.println(UserContainer.marketUsersList.get(0).getID());
-        System.out.println(UserContainer.marketUsersList.get(0).getUsername());
-
     }
 
     /**
@@ -106,7 +96,13 @@ public class MarketRegisterController implements Initializable
 
     public void registerUser(ActionEvent event)
     {
-        //Data alımı burada yapılacak
+        MarketUser user = new MarketUser(emailTextField.getText(), passwordTextField.getText(), 0, adressTextArea.getText(),nameTextField.getText());
+        //System.out.println(user.toString());
+        UserContainer.marketUsersList.add(user);
+        //System.out.println(UserContainer.marketUsersList.get(0));
+        UserContainer.activeMarketUser = user;
+        System.out.println(UserContainer.activeMarketUser);
+        //System.out.println(UserContainer.marketUsersList.get(0).getID());
     }
 
     /**
@@ -125,3 +121,4 @@ public class MarketRegisterController implements Initializable
     }
 
 }
+
