@@ -13,15 +13,15 @@
       </Label>
       <Separator layoutX="207.0" layoutY="95.0" prefHeight="4.0" prefWidth="291.0" />
       <Button fx:id="toMainPageButton" layoutX="592.0" layoutY="46.0" mnemonicParsing="false" onAction="#toMainPageButtonOnAction" style="-fx-background-color: #66cc00;" text="Return to Main Page" />
-      <TableView layoutX="65.0" layoutY="132.0" prefHeight="321.0" prefWidth="662.0">
+      <TableView fx:id="table" layoutX="65.0" layoutY="132.0" prefHeight="321.0" prefWidth="662.0">
         <columns>
-          <TableColumn prefWidth="59.399993896484375" text="Category" />
-          <TableColumn prefWidth="91.80001068115234" text="Product Name" />
-            <TableColumn prefWidth="92.20001220703125" text="Expiration Date" />
-            <TableColumn prefWidth="90.20001220703125" text="Unit Measure" />
-            <TableColumn prefWidth="86.5999755859375" text="Quantity Left" />
-            <TableColumn prefWidth="150.20004272460938" text="Increment/Decrement" />
-            <TableColumn prefWidth="89.0" text="Remove" />
+          <TableColumn fx:id="category" prefWidth="59.399993896484375" text="Category" />
+          <TableColumn fx:id="productname" prefWidth="91.80001068115234" text="Product Name" />
+            <TableColumn fx:id="expirationdate" prefWidth="92.20001220703125" text="Expiration Date" />
+            <TableColumn fx:id="unitmeasure" prefWidth="90.20001220703125" text="Unit Measure" />
+            <TableColumn fx:id="quantityleft" prefWidth="86.5999755859375" text="Quantity Left" />
+            <TableColumn fx:id="increment" prefWidth="150.20004272460938" text="Increment/Decrement" />
+            <TableColumn fx:id="remove" prefWidth="89.0" text="Remove" />
         </columns>
       </TableView>
    </children>
