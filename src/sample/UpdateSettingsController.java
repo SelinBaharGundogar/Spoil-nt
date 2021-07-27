@@ -8,10 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
@@ -31,11 +28,6 @@ import java.util.ResourceBundle;
  */
 public class UpdateSettingsController implements Initializable
 {
-    @FXML
-    private ChoiceBox<String> cityBox = new ChoiceBox();
-
-    @FXML
-    private ChoiceBox<String> districtBox = new ChoiceBox();
 
     @FXML
     private Label updateMessageLabel;
@@ -49,13 +41,14 @@ public class UpdateSettingsController implements Initializable
     private TextField passwordTextField;
     @FXML
     private Label changePasswordLabel;
+    @FXML
+    private TextArea addressTextArea;
 
     @FXML
     private ImageView marketImage;
 
     FileChooser imageChooser = new FileChooser();
-    private String[] cities = {"Ankara"};
-    private String[] districtsAnkara = {"Çankaya","Yenimahalle"};
+
 
     @FXML
     /**
@@ -77,8 +70,12 @@ public class UpdateSettingsController implements Initializable
      */
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        cityBox.getItems().addAll(cities);
-        districtBox.getItems().addAll(districtsAnkara);
+
+        nameOfMarket.setText(UserContainer.activeMarketUser.getMarketName());
+        passwordTextField.setText("123456");
+        emailTextField.setText(UserContainer.activeMarketUser.getEmail());
+        addressTextArea.setText(UserContainer.activeMarketUser.getAddress());
+
 
     }
 
@@ -90,7 +87,7 @@ public class UpdateSettingsController implements Initializable
     public void updateButtonOnAction(ActionEvent event) throws IOException
     {
 
-        if ( cityBox.getValue() == null && districtBox.getValue()== null && nameOfMarket.getText().isBlank() && deactivateRadioButton.isSelected())
+        if ( nameOfMarket.getText().isBlank() && deactivateRadioButton.isSelected())
         {
             int selection = JOptionPane.showConfirmDialog(null,"Are you sure?","Deactivation Confirmation",JOptionPane.OK_CANCEL_OPTION);
             if ( selection == JOptionPane.YES_OPTION)
@@ -99,16 +96,14 @@ public class UpdateSettingsController implements Initializable
                 toLoginPage(event);
             }
         }
-        else if ( cityBox.getValue() == null || districtBox.getValue()== null)
-        {
-            updateMessageLabel.setText("Please select a district!");
-        }
         else if ( nameOfMarket.getText().isBlank())
         {
             updateMessageLabel.setText("Name cannot be blank!");
         }
         else
         {
+            UserContainer.activeMarketUser.setMarketName(nameOfMarket.getText());
+            UserContainer.activeMarketUser.setAddress(addressTextArea.getText());
             updateMessageLabel.setText("Updated successfully!");
         }
     }
@@ -125,6 +120,7 @@ public class UpdateSettingsController implements Initializable
         }
         else
         {
+            UserContainer.activeMarketUser.setPassword(emailTextField.getText());
             changePasswordLabel.setText("Password updated successfully!");
         }
 
@@ -165,6 +161,8 @@ public class UpdateSettingsController implements Initializable
            BufferedImage bufferedImage = ImageIO.read(image);
            Image newImage = SwingFXUtils.toFXImage(bufferedImage,null);
            marketImage.setImage(newImage);
+           UserContainer.activeMarketUser.setMarketImage(newImage);
+
 
        }catch (Exception e)
        {
@@ -174,3 +172,4 @@ public class UpdateSettingsController implements Initializable
 
 
 }
+
