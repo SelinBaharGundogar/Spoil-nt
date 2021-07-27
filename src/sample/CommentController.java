@@ -1,23 +1,28 @@
-package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javax.swing.*;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  * This class controls comment.fxml page.
- * @author Aslı Karaman - 21901576
+ * @author Aslı Karaman - 21901576, Selin Bahar Gundogar
  * @version v1.0 19.07.2021
  */
-public class CommentController
+public class CommentController implements Initializable
 {
     //variables
     @FXML
@@ -44,6 +49,27 @@ public class CommentController
     private TextField comment;
     @FXML
     private Button sendMyComment;
+
+    @FXML
+    private TableView<User> table;
+
+    @FXML
+    private TableColumn<MarketUser, String> comments;
+
+    ObservableList<User> list = FXCollections.observableArrayList();
+
+    //I dont know from which user to get the comments from 
+    /*/
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        comments.setCellValueFactory(UserContainer.activeMarketUser -> UserContainer.activeMarketUser.getAllComments());
+        //expirationdate.setCellValueFactory(UserContainer.currentUser -> UserContainer.currentUser.getItem().getDate());
+        table.setItems(list);
+    }
+}
+    */
+
+
 
     /**
      * This method adds action to the return back button, which returns back to the main page
@@ -111,3 +137,4 @@ public class CommentController
         stage.show();
     }
 }
+
