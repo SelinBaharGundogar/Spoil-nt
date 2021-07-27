@@ -78,9 +78,12 @@ public class ProfileController implements Initializable
      */
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+       
         File profileFile = new File("Images/market-logo.jpg");
         Image profileImage = new Image(profileFile.toURI().toString());
-        profileImageView.setImage(profileImage);
+        //profileImageView.setImage(profileImage);
+        profileImageView.setImage(UserContainer.activeMarketUser.getMarketImage());
+        name.setText(UserContainer.activeMarketUser.getMarketName());
 
 
         /*
