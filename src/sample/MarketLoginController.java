@@ -15,7 +15,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,9 +35,8 @@ public class MarketLoginController implements Initializable
     @FXML
     private ImageView logoImageView;
     @FXML
-    private TextField userNameTextField;
-    @FXML
-    private TextField idTextField;
+    private TextField nameTextField;
+
     @FXML
     private PasswordField passwordTextField;
 
@@ -62,7 +60,7 @@ public class MarketLoginController implements Initializable
      * @throws IOException
      */
     public void loginButtonOnAction(ActionEvent event) throws IOException {
-        if ((!userNameTextField.getText().isBlank() || !idTextField.getText().isBlank()) && !passwordTextField.getText().isBlank())
+        if (!nameTextField.getText().isBlank()  && !passwordTextField.getText().isBlank())
         {
             logIn(event);
         }
@@ -87,7 +85,7 @@ public class MarketLoginController implements Initializable
     {
         for (MarketUser i: UserContainer.marketUsersList)
         {
-            if(userNameTextField.getText().equals(i.getUsername()) || Integer.parseInt(idTextField.getText()) == i.getID())
+            if(nameTextField.getText().equals(i.getMarketName()))
             {
                 if(i.getPassword().equals(passwordTextField.getText())){
                     UserContainer.activeMarketUser= i;
