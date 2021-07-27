@@ -26,3 +26,4 @@
       <Button fx:id="logOutButton" layoutX="513.0" layoutY="26.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" style="-fx-background-color: #66cc00;" text="LogOut" />
    </children>
 </AnchorPane>
+
