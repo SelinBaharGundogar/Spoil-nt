@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.scene.control.Button;
+
 import java.util.ArrayList;
 /**
  * This  class creates a basket.
@@ -12,6 +14,7 @@ public class CustomerUser extends User {
     ArrayList<Item> currentItems;
     String userName;
     private  Basket basketOfTheUser;
+    private Button addCommentButton;
 
 
 //Constructor
@@ -26,8 +29,17 @@ public class CustomerUser extends User {
         super(email, password, ID, userName);
         currentItems = new ArrayList<Item>();
         basketOfTheUser = new Basket();
+        addCommentButton = new Button("Add Comment");
         //UserContainer.addCustomerUser(this);
     }
+    
+    public Button getAddCommentButton(){
+        return addCommentButton
+    }
+    public void setaddCommentButton( Button addCommentButton){
+        this.addCommentButton = addCommentButton;
+    }
+    
     public Basket getBasketOfTheUser() {
         return basketOfTheUser;
     }
