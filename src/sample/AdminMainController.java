@@ -1,36 +1,38 @@
 package sample;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import javax.swing.*;
 import java.io.IOException;
+import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ResourceBundle;
 
 /**
  * Admin class controller
  * @author Emre Karatas-22001641
  * @version v1.0 -19.07.2021
  */
-public class AdminMainController
+public class AdminMainController implements Initializable
 {
     @FXML
-    private Label maintainance;
+    private Label dateTime;
+
     @FXML
-    private Label notification;
-    @FXML
-    private TextArea notificationTextArea;
-    @FXML
-    private CheckBox customerCheckBox;
-    @FXML
-    private CheckBox marketCheckBox;
-    @FXML
-    private TextField name;
+    private TextField nameTextField;
     @FXML
     private PasswordField password;
     @FXML
@@ -61,45 +63,12 @@ public class AdminMainController
     }
 
     /**
-     * Maintainance button on action
-     * @param event
-     */
-    public void maintainanceButtonOnAction(ActionEvent event)
-    {
-        maintainance.setText("Maintaince is running...");
-    }
-
-    public void notificationButtonOnAction(ActionEvent event)
-    {
-        if ( notificationTextArea.getText().isBlank())
-        {
-            notification.setText("Please give details about notification.");
-        }
-        else if ( !marketCheckBox.isSelected() && !customerCheckBox.isSelected())
-        {
-            notification.setText("Please select check boxes!");
-        }
-        else if ( marketCheckBox.isSelected() && !customerCheckBox.isSelected())
-        {
-            notification.setText("Notification sent to markets!");
-        }
-        else if ( customerCheckBox.isSelected() && !marketCheckBox.isSelected())
-        {
-            notification.setText("Notification sent to customers!");
-        }
-        else if (  customerCheckBox.isSelected() && marketCheckBox.isSelected())
-        {
-            notification.setText("Notification sent to both!");
-        }
-    }
-
-    /**
      * Update button on action
      * @param event
      */
     public void updateButtonOnAction(ActionEvent event)
     {
-        if ( (!name.getText().isBlank() || !password.getText().isBlank()) && password.getText().length() >= 6 )
+        if ( (!nameTextField.getText().isBlank() || !password.getText().isBlank()) && password.getText().length() >= 6 )
         {
             updateLabel.setText("Updated!");
         }
@@ -107,5 +76,43 @@ public class AdminMainController
         {
             updateLabel.setText("Update failed!");
         }
+    }
+
+    public void marketSearchButtonOnAction(ActionEvent event) throws IOException
+    {
+        Parent loginView = FXMLLoader.load(getClass().getResource("AdminMarketSearch.fxml"));
+        Scene loginViewScene= new Scene(loginView);
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(loginViewScene);
+        stage.show();
+    }
+
+    public void customerSearchButtonOnAction(ActionEvent event) throws IOException
+    {
+        Parent loginView = FXMLLoader.load(getClass().getResource("AdminCustomerSearch.fxml"));
+        Scene loginViewScene= new Scene(loginView);
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(loginViewScene);
+        stage.show();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+        initClock();
+        nameTextField.setText("Özcan Öztürk");
+
+    }
+
+    public void initClock()
+    {
+        Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+            dateTime.setText(LocalDateTime.now().format(formatter));
+        }), new KeyFrame(Duration.seconds(1)));
+        clock.setCycleCount(Animation.INDEFINITE);
+        clock.play();
     }
 }
