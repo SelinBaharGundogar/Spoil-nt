@@ -47,9 +47,9 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fffbe7;" BorderPane.alignment="CENTER">
          <children>
-            <TableView prefHeight="231.0" prefWidth="452.0" style="-fx-background-color: #fffbe7;">
+            <TableView fx:id="table" prefHeight="231.0" prefWidth="452.0" style="-fx-background-color: #fffbe7;">
               <columns>
-                <TableColumn prefWidth="463.20000916719437" style="-fx-background-color: #66cc00;" text="Comments" />
+                <TableColumn fx:id="comments" prefWidth="463.20000916719437" style="-fx-background-color: #66cc00;" text="Comments" />
               </columns>
             </TableView>
             <ScrollBar layoutX="445.0" orientation="VERTICAL" prefHeight="230.0" prefWidth="14.0" style="-fx-background-color: #66cc00;" />
