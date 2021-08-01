@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AboutUsController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fffbe7;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="506.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnToInformationOnAction" style="-fx-background-color: #66cc00;" text="Return Back" />
+            <Label layoutX="14.0" layoutY="18.0" prefHeight="54.0" prefWidth="163.0" text="About Us">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Line endX="70.80000305175781" endY="-7.62939453125E-6" layoutX="115.0" layoutY="72.0" startX="-100.0" />
+            <TextArea blendMode="MULTIPLY" cacheHint="SPEED" depthTest="DISABLE" editable="false" focusTraversable="false" layoutX="14.0" layoutY="85.0" pickOnBounds="false" prefHeight="110.0" prefWidth="560.0" scaleShape="false" style="-fx-background-image: #fffbe7;" text="The desktop application Spoil’nt aims to decrease food waste by creating a platform for markets&#10;to offer items with close expiration dates to their customers for free. The application aims to decrease food waste, poverty, climate change problems, which are the most vital problems in our world.. The application will accomplish this by assigning an ID to each one of its&#10;customer users. Each customer will only be able to add a certain quantity of food offered on the&#10;application per day to their online baskets. " wrapText="true">
+               <font>
+                  <Font size="11.0" />
+               </font></TextArea>
+            <ImageView fitHeight="165.0" fitWidth="170.0" layoutX="333.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/aboutUs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="173.0" fitWidth="201.0" layoutX="121.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/logo.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

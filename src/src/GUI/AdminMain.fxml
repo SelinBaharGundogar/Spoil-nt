@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="498.0" prefWidth="761.0" style="-fx-background-color: #fffbe7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminMainController">
+   <children>
+      <Label alignment="CENTER" layoutX="23.0" layoutY="14.0" prefHeight="40.0" prefWidth="182.0" style="-fx-background-color: #66cc00;" text="Personal Information">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="16.0" layoutY="251.0" prefHeight="22.0" prefWidth="63.0" style="-fx-background-color: #66cc00;" text="User Name" />
+      <Label alignment="CENTER" layoutX="19.0" layoutY="299.0" prefHeight="22.0" prefWidth="52.0" style="-fx-background-color: #66cc00;" text="ID" />
+      <Label alignment="CENTER" layoutX="19.0" layoutY="351.0" prefHeight="22.0" prefWidth="52.0" style="-fx-background-color: #66cc00;" text="Password" />
+      <Label fx:id="idLabel" alignment="CENTER" layoutX="107.0" layoutY="299.0" prefHeight="22.0" prefWidth="114.0" />
+      <TextField fx:id="nameTextField" layoutX="105.0" layoutY="249.0" prefHeight="26.0" prefWidth="114.0" />
+      <Button layoutX="79.0" layoutY="423.0" mnemonicParsing="false" onAction="#updateButtonOnAction" style="-fx-background-color: #66cc00;" text="Update" />
+      <Label alignment="CENTER" layoutX="411.0" layoutY="249.0" prefHeight="40.0" prefWidth="143.0" style="-fx-background-color: #66cc00;" text="Statistics">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="282.0" layoutY="327.0" prefHeight="27.0" prefWidth="135.0" style="-fx-background-color: #66cc00;" text="Customer Count">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="userCountLabel" alignment="CENTER" layoutX="309.0" layoutY="389.0" prefHeight="22.0" prefWidth="82.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="561.0" layoutY="327.0" prefHeight="27.0" prefWidth="114.0" style="-fx-background-color: #66cc00;" text="Market Count">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="marketCountLabel" alignment="CENTER" layoutX="587.0" layoutY="389.0" prefHeight="22.0" prefWidth="82.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button layoutX="691.0" layoutY="14.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" style="-fx-background-color: #66cc00;" text="LogOut" />
+      <Label fx:id="updateLabel" alignment="CENTER" layoutX="36.0" layoutY="389.0" prefHeight="22.0" prefWidth="155.0" textFill="#005dfd" />
+      <PasswordField fx:id="password" layoutX="105.0" layoutY="349.0" prefHeight="26.0" prefWidth="114.0" />
+      <Label fx:id="dateTime" alignment="CENTER" layoutX="336.0" layoutY="34.0" prefHeight="54.0" prefWidth="251.0" textAlignment="CENTER" textFill="#2002eb">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button fx:id="marketSearchButton" layoutX="248.0" layoutY="130.0" mnemonicParsing="false" onAction="#marketSearchButtonOnAction" prefHeight="72.0" prefWidth="234.0" style="-fx-background-color: #66cc00;" text="Market Search">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="customerSearchButton" layoutX="501.0" layoutY="130.0" mnemonicParsing="false" onAction="#customerSearchButtonOnAction" prefHeight="72.0" prefWidth="234.0" style="-fx-background-color: #66cc00;" text="Customer Search">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Separator layoutX="227.0" orientation="VERTICAL" prefHeight="498.0" prefWidth="6.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="45.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/profile.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="227.0" layoutY="223.0" prefHeight="3.0" prefWidth="532.0" />
+   </children>
+</AnchorPane>
