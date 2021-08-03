@@ -1,0 +1,12 @@
+
+Weekly Logs
+
+Project was completed in two weeks.
+
+Week 1 -  [ 19.07.2021-25.07.2021]
+
+All of the group members have started coding their part in the program according to the detailed design report submitted on the 17th of July,2021. Project structure was complete at the end of that week. Model classes were completed and GUI classes were connected to each other.
+
+Week 2 -  [26.07.2021-31.07.2021]
+We had some problems in the first week. We have solved these problems by meeting every day of the week on Zoom, spending nearly 3-4 hours in a day. We had 5 meetings over the week. We have already completed the program on 30.07.2021, friday. On Saturday 31.07.2021, we started writing this document.
+
