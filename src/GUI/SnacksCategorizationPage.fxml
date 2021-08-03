@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SnacksController">
+    <left>
+        <AnchorPane prefHeight="538.0" prefWidth="760.0" style="-fx-background-color: #fffbe7;" BorderPane.alignment="CENTER">
+            <children>
+                <ToolBar layoutY="18.0" prefHeight="37.0" prefWidth="786.0" style="-fx-background-color: #66cc00;">
+                    <items>
+                        <Button mnemonicParsing="false" style="-fx-background-color: #66cc00;" text="Spoil'nt" />
+                        <Button mnemonicParsing="false" onAction="#profileButtonOnAction" style="-fx-background-color: #66cc00;" text="Profile" />
+                        <Button mnemonicParsing="false" onAction="#logOutButtonOnAction" style="-fx-background-color: #66cc00;" text="Logout" />
+                        <Button mnemonicParsing="false" onAction="#goToInformationOnAction" style="-fx-background-color: #66cc00;" text="Information" />
+                        <Button mnemonicParsing="false" onAction="#returnToMainOnAction" style="-fx-background-color: #66cc00;" text="Return to Main Page" />
+                    </items>
+                </ToolBar>
+                <Label layoutX="42.0" layoutY="90.0" prefHeight="27.0" prefWidth="81.0" text="Category" textFill="#66cc00">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="categoryName" layoutX="56.0" layoutY="136.0" prefHeight="27.0" prefWidth="54.0" text="Snacks">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+                <AnchorPane layoutX="198.0" layoutY="67.0" prefHeight="424.0" prefWidth="255.0">
+                    <children>
+                        <TableView fx:id="table1" layoutX="-23.0" layoutY="-5.0" prefHeight="460.0" prefWidth="378.0">
+                            <columns>
+                                <TableColumn fx:id="name" prefWidth="82.60002136230469" text="Name" />
+                                <TableColumn fx:id="market" minWidth="0.0" prefWidth="96.5999755859375" text="Market" />
+                                <TableColumn fx:id="date" prefWidth="95.4000244140625" text="Expire Date" />
+                                <TableColumn fx:id="price" minWidth="0.0" prefWidth="103.60003662109375" text="Price" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+                <ImageView fitHeight="81.0" fitWidth="146.0" layoutX="10.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/snacks.png" />
+                    </image></ImageView>
+                <ScrollBar layoutX="552.0" layoutY="62.0" orientation="VERTICAL" prefHeight="459.0" prefWidth="14.0" style="-fx-background-color: #66cc00;" />
+                <TableView fx:id="discounted" layoutX="572.0" layoutY="63.0" prefHeight="155.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="discountedMost" prefWidth="199.199951171875" text=" Most Discounted" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="basket" layoutX="572.0" layoutY="328.0" prefHeight="193.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="basketOFUser" prefWidth="199.199951171875" text="Basket" />
+                    </columns>
+                </TableView>
+                <ScrollBar layoutX="765.0" layoutY="62.0" orientation="VERTICAL" prefHeight="153.0" prefWidth="14.0" style="-fx-background-color: #66cc00;" />
+                <ScrollBar layoutX="765.0" layoutY="329.0" orientation="VERTICAL" prefHeight="192.0" prefWidth="14.0" style="-fx-background-color: #66cc00;" />
+                <ImageView fitHeight="84.0" fitWidth="117.0" layoutX="627.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/basket.png" />
+                    </image></ImageView>
+            <Button layoutX="32.0" layoutY="289.0" mnemonicParsing="false" onAction="#buttonMethod" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: #66cc00;" text="Add to Basket" />
+            <ImageView fitHeight="137.0" fitWidth="148.0" layoutX="15.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/logo.jpeg" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+</BorderPane>

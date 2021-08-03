@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="652.0" style="-fx-background-color: #fffbe7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminRegisterController">
+    <children>
+        <AnchorPane layoutX="34.0" prefHeight="134.0" prefWidth="615.0" style="-fx-background-color: #fffbe7;">
+            <children>
+                <ImageView fx:id="registerImage" fitHeight="130.0" fitWidth="111.0" layoutX="29.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/register.jpeg" />
+                    </image>
+                </ImageView>
+                <Label alignment="CENTER" layoutX="140.0" layoutY="19.0" prefHeight="96.0" prefWidth="336.0" text="Admin Registration">
+                    <font>
+                        <Font size="33.0" />
+                    </font>
+                </Label>
+                <Line endX="100.0" layoutX="307.0" layoutY="101.0" startX="-100.0" />
+            </children></AnchorPane>
+        <TextField fx:id="emailTextField" layoutX="323.0" layoutY="161.0" prefHeight="26.0" prefWidth="256.0" promptText="Email" />
+        <Label layoutX="323.0" layoutY="191.0" prefHeight="27.0" prefWidth="73.0" text="Password" />
+        <PasswordField fx:id="passwordTextField" layoutX="323.0" layoutY="218.0" prefHeight="27.0" prefWidth="256.0" promptText="Password" />
+        <Label layoutX="321.0" layoutY="256.0" text="Confirm Password" />
+        <PasswordField fx:id="confirmPasswordTextField" layoutX="323.0" layoutY="277.0" prefHeight="27.0" prefWidth="256.0" promptText="Confirm Password" />
+        <Button fx:id="registerButton" layoutX="173.0" layoutY="412.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="27.0" prefWidth="336.0" style="-fx-background-color: #66cc00;" text="Register" />
+        <Button fx:id="cancelButton" layoutX="173.0" layoutY="448.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="27.0" prefWidth="336.0" style="-fx-background-color: #66cc00;" text="Back to Login Page">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Button>
+        <TextField fx:id="nameTextField" layoutX="59.0" layoutY="161.0" prefHeight="26.0" prefWidth="201.0" promptText="Name" />
+        <TextField fx:id="surNameTextField" layoutX="58.0" layoutY="218.0" prefHeight="26.0" prefWidth="201.0" promptText="Surname" />
+        <Label layoutX="322.0" layoutY="134.0" prefHeight="27.0" prefWidth="54.0" text="Email" />
+        <Label layoutX="56.0" layoutY="134.0" prefHeight="27.0" prefWidth="54.0" text="Name" />
+        <Label layoutX="59.0" layoutY="191.0" prefHeight="27.0" prefWidth="54.0" text="Surname" />
+        <TextField fx:id="userNameTextField" layoutX="58.0" layoutY="277.0" prefHeight="26.0" prefWidth="202.0" promptText="UserName" />
+        <Label layoutX="59.0" layoutY="251.0" prefHeight="27.0" prefWidth="74.0" text="UserName" />
+        <Label fx:id="registerMessageLabel" alignment="CENTER" layoutX="174.0" layoutY="376.0" prefHeight="26.0" prefWidth="336.0" textFill="#104fcd">
+            <font>
+                <Font size="13.0" />
+            </font></Label>
+        <Label fx:id="passwordWarningLabel" layoutX="423.0" layoutY="256.0" prefHeight="19.0" prefWidth="264.0" textFill="#cc1010" />
+        <Label layoutX="58.0" layoutY="327.0" prefHeight="18.0" prefWidth="202.0" text="Admin Verification Code" />
+        <TextField fx:id="adminVerification" layoutX="322.0" layoutY="323.0" prefHeight="26.0" prefWidth="256.0" promptText="code" />
+        <Label layoutX="56.0" layoutY="349.0" prefHeight="26.0" prefWidth="336.0" text="*NOTE: Enter the code provided by Spoil'nt HR Department." textFill="#0007ff" />
+    </children>
+</AnchorPane>

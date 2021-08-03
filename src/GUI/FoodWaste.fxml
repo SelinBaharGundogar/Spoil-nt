@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FoodWasteController">
+   <center>
+      <AnchorPane prefHeight="462.0" prefWidth="630.0" style="-fx-background-color: #fffbe7;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="506.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnToInformationOnAction" style="-fx-background-color: #66cc00;" text="Return Back" />
+            <Label layoutX="29.0" layoutY="31.0" text="Food Waste">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Line endX="126.20001220703125" endY="-7.62939453125E-6" layoutX="130.0" layoutY="85.0" startX="-100.0" />
+            <TextArea blendMode="MULTIPLY" editable="false" layoutX="64.0" layoutY="105.0" prefHeight="224.0" prefWidth="458.0" text="Food loss and waste is food that is not eaten. The causes of food waste or loss are numerous and occur throughout the food system, during production, processing, distribution, retail and consumption. Around 14 percent of food produced is lost from post-harvest up to, but not including, the retail level. Out of the total food available to consumers in 2019, approximately 17 percent went to the waste bins of households, retailers, restaurants and other food services.ood loss and waste is a major part of the impact of agriculture on climate change and other environmental issues. Food production is resource-intensive, therefore food lost or wasted entails poor use of resources and will have negative environmental impacts. Reducing food loss and waste will improve resource use efficiency and lower greenhouse gas emissions per unit of food consumed because more food reaches the consumer for a given level of resources used(Source: Wikipedia)." wrapText="true" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
